@@ -30,25 +30,27 @@
 //   Extends
 // -------------------------------------
 
-%ellipsis,
-.ellipsis {
+%vertical-align {
+  @include transform(translateY(-50%));
+  position: relative;
+  top: 50%;
+}
+
+%ellipsis {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-%no-border,
-.no-border {
+%no-border, {
   border: none;
 }
 
-%hidden,
-.hidden {
+%hidden {
   display: none !important;
 }
 
-%visuallyhidden,
-.visuallyhidden {
+%visuallyhidden {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);

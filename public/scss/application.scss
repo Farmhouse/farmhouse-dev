@@ -8,11 +8,24 @@
 //   Core
 // -------------------------------------
 
-@import 'vendor/bourbon/bourbon.scss';
-@import 'vendor/grid.scss';
-@import 'core/settings.scss';
-@import 'core/helpers.scss';
-@import 'core/normalize.scss';
-@import 'core/base.scss';
-@import 'core/layout.scss';
-@import 'core/typography.scss';
+@import 'vendor/bourbon/bourbon';
+@import 'core/settings';
+@import 'vendor/neat/neat';
+@import 'vendor/grid';
+@import 'core/helpers';
+@import 'core/normalize';
+@import 'core/base';
+@import 'core/layout';
+@import 'core/typography';
+
+main {
+  @include outer-container;
+}
+
+section {
+  @include span-columns(9, table);
+}
+
+aside {
+  @include span-columns(3, table);
+}
