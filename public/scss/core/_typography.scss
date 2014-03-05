@@ -52,3 +52,16 @@ h6,
 .t-shout {
   text-transform: uppercase;
 }
+
+
+// -------------------------------------
+//   Links
+// -------------------------------------
+
+a {
+  color: $base-link-color;
+  &:focus,
+  &:hover {
+    color: $base-hover-color;
+  }
+}
