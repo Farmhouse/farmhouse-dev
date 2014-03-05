@@ -1,0 +1,51 @@
+// *************************************
+//
+//   Settings
+//
+// *************************************
+
+// -------------------------------------
+//   @font-face
+// -------------------------------------
+
+
+// -------------------------------------
+//   Variables
+// -------------------------------------
+
+// ----- Colors ----- //
+$base-background: #fff;
+$base-color: #504e4e;
+$base-header-color: #474747;
+$base-link-color: $base-color;
+$base-hover-color: #ffc8b3;
+
+
+// ----- Borders ----- //
+
+
+// ----- Typography ----- //
+$base-fontFamily: $georgia;
+$base-fontWeight: normal;
+$base-fontSize: 1em;
+$base-lineHeight: 1.4;
+
+
+// ----- Whitespace ----- //
+$base-whitespace: 30px;
+$l-half-whitespace: $base-whitespace / 2;
+$l-double-whitespace: $base-whitespace * 2;
+
+// ----- Contexts ----- //
+$l-site-width: 960px;
+$l-aside-wide: 260px;
+$l-main-wide: 650px;
+
+// ----- Layout ----- //
+$l-maxWidth: $l-site-width;
+$l-min-small: 480px;
+$l-min-medium: 769px;
+$l-min-large: 960px;
+$l-max-small: 479px;
+$l-max-medium: 768px;
+$l-max-large: 959px;

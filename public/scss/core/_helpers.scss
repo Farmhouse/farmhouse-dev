@@ -1,0 +1,78 @@
+// *************************************
+//
+//   Helpers
+//
+// *************************************
+
+// -------------------------------------
+//   Mixins
+// -------------------------------------
+
+// ----- Respond-to ----- //
+@mixin respond-to($val, $query: min-width, $media: screen) {
+  @media #{$media} and ($query: $val) {
+    @content;
+  }
+}
+
+
+// -------------------------------------
+//   Functions
+// -------------------------------------
+
+// ---- px to percent ----- //
+@function percent($target, $context: $l-maxWidth) {
+  @return #{$target / $context * 100}#{"%"};
+}
+
+
+// -------------------------------------
+//   Extends
+// -------------------------------------
+
+%ellipsis,
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%no-border,
+.no-border {
+  border: none;
+}
+
+%hidden,
+.hidden {
+  display: none !important;
+}
+
+%visuallyhidden,
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
+
+%show-mobile,
+.show-mobile {
+  @include respond-to($l-min-medium) {
+    display: none !important;
+  }
+}
+
+%show-desktop,
+.show-desktop {
+  @include respond-to($l-max-medium, 'max-width') {
+    display: none !important;
+  }
+}
+
+.media {
+  @extend %clearfix;
+  .media-img {
+    float: left;
+  }
+}
