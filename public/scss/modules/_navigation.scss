@@ -53,12 +53,15 @@
       }
     }
     a {
-      @include transition(border-color 0.3s ease-in);
+      @include transition(border-color 0.3s ease-in, color 0.3s ease-in);
       border-bottom: 5px solid transparent;
+      color: rgba($base-header-color, 0.80);
       padding: 0.6em .5em 0.85em;
+      text-decoration: none;
       &:hover,
       &:focus {
         border-color: $highlight;
+        color: rgba($base-header-color, 1.00);
       }
     }
   }

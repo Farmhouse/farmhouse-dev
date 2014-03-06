@@ -21,15 +21,6 @@
   @include respond-to($l-min-large) {
     padding-top: 2.5em;
   }
-  a {
-    @include transition(color 0.3s ease);
-    color: rgba($base-header-color, 0.80);
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      color: rgba($base-header-color, 1.00);
-    }
-  }
 }
 
 .brand-logo {
