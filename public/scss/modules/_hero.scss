@@ -1,0 +1,19 @@
+// *************************************
+//
+//   Hero
+//
+// *************************************
+
+.hero {
+  max-height: 800px;
+  overflow: hidden;
+  @include respond-to($l-max-small, max-width) {
+    background-color: $alt-background;
+    padding-top: 3.4em;
+  }
+}
+
+.hero-img {
+  @include transition(margin-top .5s ease-out);
+  width: 100%;
+}

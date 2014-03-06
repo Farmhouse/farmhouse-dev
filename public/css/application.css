@@ -488,7 +488,18 @@ a {
       height: 30px;
       width: 360px; } }
 
-.img-full {
+.hero {
+  max-height: 800px;
+  overflow: hidden; }
+  @media screen and (max-width: 624px) {
+    .hero {
+      background-color: #252422;
+      padding-top: 3.4em; } }
+
+.hero-img {
+  -webkit-transition: margin-top 0.5s ease-out;
+  -moz-transition: margin-top 0.5s ease-out;
+  transition: margin-top 0.5s ease-out;
   width: 100%; }
 
 .nav-wrapper {
