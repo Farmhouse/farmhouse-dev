@@ -8,48 +8,45 @@
 //   Headings
 // -------------------------------------
 
-h1, h2, h3, h4, h5, h6,
-%t-h1, %t-h2, %t-h3, %t-h4, %t-h5, %t-h6 {
+h1, h2, h3, h4,
+%t-h1, %t-h2, %t-h3, %t-h4 {
   @extend %t-shout;
   color: $base-color;
-  font-family: $base-fontFamily;
+  font-family: $alt-fontFamily-medium;
   font-style: normal;
   font-weight: normal;
-  margin-top: 0;
+  line-height: 1.2;
+  margin: 1.414em 0 0.5em;
 }
 
 h1,
-.t-h1,
 %t-h1 {
+  font-family: $alt-fontFamily-bold;
+  font-size: 3.157em;
+  margin-top: 0;
 }
 
 h2,
-.t-h2,
 %t-h2 {
+  font-size: 2.369em;
 }
 
 h3,
-.t-h3,
 %t-h3 {
+  font-size: 1.777em;
 }
 
 h4,
-.t-h4,
 %t-h4 {
+  font-size: 1.333em;
 }
 
-h5,
-.t-h5,
-%t-h5 {
+small,
+%t-small {
+  font-size: 0.75em;
 }
 
-h6,
-.t-h6,
-%t-h6 {
-}
-
-%t-shout,
-.t-shout {
+%t-shout {
   text-transform: uppercase;
 }
 
@@ -60,6 +57,7 @@ h6,
 
 a {
   color: $base-link-color;
+  text-decoration: underline;
   &:focus,
   &:hover {
     color: $base-hover-color;

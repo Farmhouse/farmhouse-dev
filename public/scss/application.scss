@@ -9,23 +9,20 @@
 // -------------------------------------
 
 @import 'vendor/bourbon/bourbon';
+@import 'core/fonts';
 @import 'core/settings';
 @import 'vendor/neat/neat';
-@import 'vendor/grid';
 @import 'core/helpers';
 @import 'core/normalize';
 @import 'core/base';
 @import 'core/layout';
 @import 'core/typography';
 
-main {
-  @include outer-container;
-}
 
-section {
-  @include span-columns(9, table);
-}
+// -------------------------------------
+//   Modules
+// -------------------------------------
 
-aside {
-  @include span-columns(3, table);
-}
+@import 'modules/banner';
+@import 'modules/images';
+@import 'modules/navigation';

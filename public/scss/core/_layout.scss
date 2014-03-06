@@ -10,9 +10,8 @@
 
 %l-container,
 .l-container {
-  @include clearfix;
-  margin: 0 auto;
-  max-width: $l-maxWidth;
+  @include outer-container;
+  padding: 0 percent($base-whitespace, $l-site-width);
 }
 
 
@@ -20,12 +19,14 @@
 //   Utilities
 // -------------------------------------
 
-%l-pullLeft,
-.l-pullLeft {
+%l-pullLeft {
   float: left;
 }
 
-%l-pullRight,
-.l-pullRight {
+%l-pullRight {
   float: right;
+}
+
+%l-inline {
+  display: inline-block;
 }

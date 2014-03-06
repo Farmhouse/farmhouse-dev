@@ -4,20 +4,6 @@
 //
 // *************************************
 
-@import "../vendor/neat/neat-helpers";
-
-
-// -------------------------------------
-//   Grid
-// -------------------------------------
-
-
-
-// -------------------------------------
-//   @font-face
-// -------------------------------------
-
-
 // -------------------------------------
 //   Variables
 // -------------------------------------
@@ -29,6 +15,11 @@ $base-header-color: #fff;
 $base-link-color: inherit;
 $base-hover-color: inherit;
 
+$alt-background: #252422;
+$white: #fff;
+$black: #000;
+$highlight: #dcb140;
+
 
 // ----- Borders ----- //
 
@@ -36,8 +27,13 @@ $base-hover-color: inherit;
 // ----- Typography ----- //
 $base-fontFamily: $georgia;
 $base-fontWeight: normal;
-$base-fontSize: 1em;
+$base-fontSize: .875em;
 $base-lineHeight: 1.4;
+
+$alt-fontFamily: 'alright-sans-regular';
+$alt-fontFamily-italic: 'alright-sans-regular-italic';
+$alt-fontFamily-medium: 'alright-sans-medium';
+$alt-fontFamily-bold: 'alright-sans-bold';
 
 
 // ----- Whitespace ----- //
@@ -46,15 +42,31 @@ $l-half-whitespace: $base-whitespace / 2;
 $l-double-whitespace: $base-whitespace * 2;
 
 // ----- Contexts ----- //
-$l-site-width: 960px;
-$l-aside-wide: 260px;
-$l-main-wide: 650px;
+$l-site-width: 1230px;
+$l-aside-wide: 350px;
+$l-main-wide: 790px;
 
 // ----- Layout ----- //
 $l-maxWidth: $l-site-width;
-$l-min-small: 480px;
-$l-min-medium: 769px;
-$l-min-large: 960px;
-$l-max-small: 479px;
-$l-max-medium: 768px;
-$l-max-large: 959px;
+$l-min-xsmall: 480px;
+$l-min-small: 625px;
+$l-min-medium: 850px;
+$l-min-large: 1170px;
+$l-max-xsmall: 479px;
+$l-max-small: 624px;
+$l-max-medium: 849px;
+$l-max-large: 1169px;
+
+$base-padding: percent($base-whitespace, $l-site-width);
+
+
+// -------------------------------------
+//   Grid
+// -------------------------------------
+
+@import "../vendor/neat/neat-helpers";
+
+$max-width: em(1230, 14);
+$grid-columns: 12;
+$gutter: 30px;
+$column: 70px;

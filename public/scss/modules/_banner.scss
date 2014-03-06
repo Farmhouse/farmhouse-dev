@@ -1,0 +1,32 @@
+// *************************************
+//
+//   Banner
+//
+// *************************************
+
+[role=banner] {
+  @include respond-to($l-max-small, max-width) {
+    background-color: $alt-background;
+    padding-top: 3.4em;
+  }
+}
+
+.brand-logo {
+  @include hide-text;
+  background-image: url(../img/img-logo.svg);
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  float: left;
+  height: 20px;
+  line-height: 1;
+  width: 175px;
+  @include respond-to($l-min-medium) {
+    height: 25px;
+    width: 268px;
+  }
+  @include respond-to($l-min-large) {
+    height: 30px;
+    width: 360px;
+  }
+}

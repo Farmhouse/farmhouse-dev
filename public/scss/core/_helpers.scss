@@ -71,10 +71,3 @@
     display: none !important;
   }
 }
-
-.media {
-  @extend %clearfix;
-  .media-img {
-    float: left;
-  }
-}
