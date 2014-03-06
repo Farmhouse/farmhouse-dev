@@ -477,7 +477,7 @@ a {
   color: transparent;
   font: 0/0 a;
   text-shadow: none;
-  background-image: url(../img/img-logo.svg);
+  background-image: url(../img/brand-logo.svg);
   background-position: left center;
   background-repeat: no-repeat;
   -webkit-background-size: contain;
@@ -548,10 +548,30 @@ a {
   width: 100%; }
 
 .nav-toggle {
+  color: transparent;
+  font: 0/0 a;
+  text-shadow: none;
   position: absolute;
-  top: 0.15em;
+  top: -5px;
   right: 0px;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-property: ease;
+  transition-property: ease;
+  background-image: url(../img/brand-icon-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+  height: 25px;
+  width: 17px;
   z-index: 100; }
+  .opened + .nav-toggle {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
 
 @media screen and (max-width: 849px) {
   [role=navigation] {

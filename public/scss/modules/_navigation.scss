@@ -68,8 +68,21 @@
 }
 
 .nav-toggle {
-  @include position(absolute, 0.15em 0px 0 0);
+  @include hide-text;
+  @include position(absolute, -5px 0px 0 0);
+  @include transition-property(transform);
+  @include transition-duration(0.5s);
+  @include transition-property(ease);
+  background-image: url(../img/brand-icon-white.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 25px;
+  width: 17px;
   z-index: 100;
+  .opened + & {
+    @include transform(rotate(-45deg));
+  }
 }
 
 [role=navigation] {
