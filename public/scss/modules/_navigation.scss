@@ -5,78 +5,6 @@
 // *************************************
 
 // -------------------------------------
-//   Header Navigation
-// -------------------------------------
-
-.nav-wrapper {
-  position: relative;
-  width: 100%;
-}
-
-.nav-toggle {
-  @include position(absolute, 0.15em 0px 0 0);
-  z-index: 100;
-}
-
-[role=navigation] {
-  @include respond-to($l-max-medium, max-width) {
-    clear: left;
-    width: 100%;
-  }
-  @include respond-to($l-min-medium) {
-    float: right;
-  }
-}
-
-.nav-main {
-  @include respond-to($l-max-medium, max-width) {
-    padding-top: 1em;
-    text-align: center;
-    li {
-      border-top: 1px solid rgba($white, .3);
-    }
-    a {
-      display: block;
-      padding: 1em 0;
-      text-shadow: 0 1px 0 rgba($black, 0.50);
-    }
-  }
-  @include respond-to($l-min-medium) {
-    li,
-    a {
-      display: inline-block;
-    }
-    li {
-      padding: 0 .5em;
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-    a {
-      @include transition(border-color 0.3s ease-in, color 0.3s ease-inco);
-      border-bottom: 5px solid transparent;
-      color: rgba($base-header-color, 0.80);
-      padding: 0.6em .5em 0.85em;
-      text-decoration: none;
-      &:hover,
-      &:focus {
-        border-color: $highlight;
-        color: rgba($base-header-color, 1.00);
-      }
-    }
-  }
-  @include respond-to($l-min-large) {
-    li {
-      padding: 0 1em;
-    }
-    a {
-      padding: 1.15em 1em 0.85em;
-    }
-  }
-}
-
-
-// -------------------------------------
 //   Mobile Nav Menu
 // -------------------------------------
 
@@ -126,5 +54,81 @@
   }
   .nav-toggle {
     display: none;
+  }
+}
+
+
+// -------------------------------------
+//   Header Navigation
+// -------------------------------------
+
+.nav-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.nav-toggle {
+  @include position(absolute, 0.15em 0px 0 0);
+  z-index: 100;
+}
+
+[role=navigation] {
+  @include respond-to($l-max-medium, max-width) {
+    clear: left;
+    left: percent(-$base-whitespace, $l-site-width);
+    position: relative;
+    width: #{$base-whitespace / $l-site-width * 100 * 2 + 100}#{"%"};
+  }
+  @include respond-to($l-min-medium) {
+    float: right;
+  }
+}
+
+.nav-main {
+  @include respond-to($l-max-medium, max-width) {
+    padding-top: 1em;
+    text-align: center;
+    li {
+      border-top: 1px solid rgba($white, .3);
+    }
+    a {
+      display: block;
+      padding: 1em 0;
+      text-shadow: 0 1px 0 rgba($black, 0.50);
+    }
+    li:last-child a {
+      padding-bottom: 0;
+    }
+  }
+  @include respond-to($l-min-medium) {
+    li,
+    a {
+      display: inline-block;
+    }
+    li {
+      padding: 0 .5em;
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+    a {
+      @include transition(border-color 0.3s ease-in, color 0.3s ease-in);
+      border-bottom: 5px solid transparent;
+      color: rgba($base-header-color, 0.80);
+      padding: 0.6em .5em 0.85em;
+      &:hover,
+      &:focus {
+        border-color: $highlight;
+        color: rgba($base-header-color, 1.00);
+      }
+    }
+  }
+  @include respond-to($l-min-large) {
+    li {
+      padding: 0 1em;
+    }
+    a {
+      padding: 1.15em 1em 0.85em;
+    }
   }
 }

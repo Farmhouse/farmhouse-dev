@@ -1,18 +1,5 @@
 /* global responsiveNav:true */
 
-function centerImage(wrapper) {
-  var image = wrapper.find('img');
-  if (wrapper.height() >= 800) {
-    var wrapperHeight = wrapper.height();
-    var imageHeight = image.height();
-    var overlap = (wrapperHeight - imageHeight) / 2;
-    image.css('margin-top', overlap);
-  }
-  else {
-    image.css('margin-top', 0);
-  }
-}
-
 // debulked onresize handler
 function on_resize(c,t){onresize=function(){clearTimeout(t);t=setTimeout(c,100);};return c;}
 
@@ -43,17 +30,6 @@ $(function() {
 
   // Creates collapsed nav on mobile
   responsiveNav(".nav-collapse", {openPos: "relative"});
-
-
-  // Center hero image vertically
-  if ($('.center-image').length > 0) {
-    wrapper = $('.center-image')
-    centerImage(wrapper);
-
-    on_resize(function() {
-      centerImage(wrapper);
-    });
-  }
 
 });
 

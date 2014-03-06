@@ -21,6 +21,10 @@
   @include respond-to($l-min-large) {
     padding-top: 2.5em;
   }
+  a {
+    color: $white;
+    text-decoration: none;
+  }
 }
 
 .brand-logo {
