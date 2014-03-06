@@ -5,10 +5,30 @@
 // *************************************
 
 [role=banner] {
-  @include respond-to($l-max-small, max-width) {
-    background-color: $alt-background;
-    padding-top: 3.4em;
+  @extend %t-shout;
+  @include position(fixed, 0px 0 0 0px);
+  background: rgba($alt-background, 0.60);
+  border-bottom: 1px solid rgba($alt-background, 0.30);
+  box-shadow: 0 2px 3px rgba($alt-background, 0.30);
+  font-family: $alt-fontFamily;
+  padding: 1em 0;
+  width: 100%;
+  z-index: 100;
+  @include respond-to($l-min-medium) {
+    padding-top: 1.15em;
+    padding-bottom: 0;
   }
+  @include respond-to($l-min-large) {
+    padding-top: 2.5em;
+  }
+  a {
+    color: $base-header-color;
+    text-decoration: none;
+  }
+//  @include respond-to($l-max-small, max-width) {
+//    background-color: $alt-background;
+//    padding-top: 3.4em;
+//  }
 }
 
 .brand-logo {

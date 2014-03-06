@@ -8,29 +8,6 @@
 //   Header Navigation
 // -------------------------------------
 
-[role=navigation] {
-  @extend %t-shout;
-  @include position(fixed, 0px 0 0 0px);
-  background: rgba($alt-background, 0.60);
-  border-bottom: 1px solid rgba($alt-background, 0.30);
-  box-shadow: 0 2px 3px rgba($alt-background, 0.30);
-  font-family: $alt-fontFamily;
-  padding: 1em 0;
-  width: 100%;
-  z-index: 100;
-  a {
-    color: $base-header-color;
-    text-decoration: none;
-  }
-  @include respond-to($l-min-medium) {
-    padding-top: 1.15em;
-    padding-bottom: 0;
-  }
-  @include respond-to($l-min-large) {
-    padding-top: 2.5em;
-  }
-}
-
 .nav-wrapper {
   position: relative;
   width: 100%;
@@ -38,14 +15,23 @@
 
 .nav-toggle {
   @include position(absolute, 0.15em 0px 0 0);
+  z-index: 100;
+}
+
+[role=navigation] {
+  @include respond-to($l-max-medium, max-width) {
+    clear: left;
+    width: 100%;
+  }
+  @include respond-to($l-min-medium) {
+    float: right;
+  }
 }
 
 .nav-main {
   @include respond-to($l-max-medium, max-width) {
-    clear: left;
     padding-top: 1em;
     text-align: center;
-    width: 100%;
     li {
       border-top: 1px solid rgba($white, .3);
     }
@@ -56,7 +42,6 @@
     }
   }
   @include respond-to($l-min-medium) {
-    float: right;
     li,
     a {
       display: inline-block;
@@ -94,8 +79,6 @@
 
 @media (max-width: $l-max-medium) {
   .nav-collapse ul {
-    margin: 0;
-    padding: 0;
     width: 100%;
     display: block;
     list-style: none;
