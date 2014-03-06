@@ -6,6 +6,9 @@
 
 html {
   font-size: $base-fontSize;
+  @include respond-to($l-min-xlarge) {
+    font-size: 1.125em;
+  }
 }
 
 body {

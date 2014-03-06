@@ -8,10 +8,12 @@
 //   Container
 // -------------------------------------
 
-%l-container,
 .l-container {
   @include outer-container;
   padding: 0 percent($base-whitespace, $l-site-width);
+  @include respond-to($l-site-width + 2 * $base-whitespace) {
+    padding: 0;
+  }
 }
 
 

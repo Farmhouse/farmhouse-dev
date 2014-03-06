@@ -46,14 +46,14 @@ $(function() {
 
 
   // Center hero image vertically
-  if ($('.center-image').length > 0) {
-    wrapper = $('.center-image')
-    centerImage(wrapper);
-
-    on_resize(function() {
-      centerImage(wrapper);
-    });
-  }
+  // if ($('.center-image').length > 0) {
+  //   wrapper = $('.center-image')
+  //   centerImage(wrapper);
+  //
+  //   on_resize(function() {
+  //     centerImage(wrapper);
+  //   });
+  // }
 
 });
 
