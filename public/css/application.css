@@ -194,6 +194,7 @@ figure {
  */
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0; }
 
@@ -286,6 +287,8 @@ input {
  * 2. Remove excess padding in IE 8/9/10.
  */
 input[type="checkbox"], input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -410,9 +413,6 @@ textarea {
     display: table; }
   .l-container:after {
     clear: both; }
-  @media screen and (min-width: 1290px) {
-    .l-container {
-      padding: 0; } }
 
 
 
@@ -456,7 +456,7 @@ a {
   top: 0px;
   left: 0px;
   background: rgba(37, 36, 34, 0.6);
-  border-bottom: 1px solid rgba(37, 36, 34, 0.3);
+  -webkit-box-shadow: 0 2px 3px rgba(37, 36, 34, 0.3);
   box-shadow: 0 2px 3px rgba(37, 36, 34, 0.3);
   font-family: 'alright-sans-regular';
   padding: 1em 0;
@@ -480,19 +480,24 @@ a {
   background-image: url(../img/img-logo.svg);
   background-position: left center;
   background-repeat: no-repeat;
+  -webkit-background-size: contain;
   background-size: contain;
   float: left;
-  height: 20px;
+  height: 14px;
   line-height: 1;
-  width: 175px; }
+  width: 180px; }
   @media screen and (min-width: 850px) {
     .brand-logo {
-      height: 25px;
-      width: 268px; } }
+      height: 21px;
+      width: 270px; } }
   @media screen and (min-width: 1170px) {
     .brand-logo {
-      height: 30px;
+      height: 28px;
       width: 360px; } }
+  @media screen and (min-width: 1600px) {
+    .brand-logo {
+      height: 35px;
+      width: 450px; } }
 
 @media screen and (max-width: 624px) {
   .hero {
@@ -501,7 +506,6 @@ a {
 
 .hero-img {
   -webkit-transition: margin-top 0.5s ease-out;
-  -moz-transition: margin-top 0.5s ease-out;
   transition: margin-top 0.5s ease-out;
   width: 100%; }
 
@@ -580,11 +584,10 @@ a {
       padding-right: 0; }
   .nav-main a {
     -webkit-transition: border-color 0.3s ease-in, color 0.3s ease-in;
-    -moz-transition: border-color 0.3s ease-in, color 0.3s ease-in;
     transition: border-color 0.3s ease-in, color 0.3s ease-in;
     border-bottom: 5px solid transparent;
     color: rgba(255, 255, 255, 0.8);
-    padding: 0.6em 0.5em 0.85em; }
+    padding: 0.5em 0.5em 0.85em; }
     .nav-main a:hover, .nav-main a:focus {
       border-color: #dcb140;
       color: white; } }
@@ -592,6 +595,6 @@ a {
   .nav-main li {
     padding: 0 1em; }
   .nav-main a {
-    padding: 1.15em 1em 0.85em; } }
+    padding: 1em 1em 0.85em; } }
 
 /*# sourceMappingURL=application.map */

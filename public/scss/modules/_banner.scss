@@ -8,7 +8,6 @@
   @extend %t-shout;
   @include position(fixed, 0px 0 0 0px);
   background: rgba($alt-background, 0.60);
-  border-bottom: 1px solid rgba($alt-background, 0.30);
   box-shadow: 0 2px 3px rgba($alt-background, 0.30);
   font-family: $alt-fontFamily;
   padding: 1em 0;
@@ -34,15 +33,19 @@
   background-repeat: no-repeat;
   background-size: contain;
   float: left;
-  height: 20px;
+  height: 14px;
   line-height: 1;
-  width: 175px;
+  width: 180px;
   @include respond-to($l-min-medium) {
-    height: 25px;
-    width: 268px;
+    height: 21px;
+    width: 270px;
   }
   @include respond-to($l-min-large) {
-    height: 30px;
+    height: 28px;
     width: 360px;
+  }
+  @include respond-to($l-min-xlarge) {
+    height: 35px;
+    width: 450px;
   }
 }

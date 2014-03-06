@@ -115,7 +115,7 @@
       @include transition(border-color 0.3s ease-in, color 0.3s ease-in);
       border-bottom: 5px solid transparent;
       color: rgba($base-header-color, 0.80);
-      padding: 0.6em .5em 0.85em;
+      padding: 0.5em .5em 0.85em;
       &:hover,
       &:focus {
         border-color: $highlight;
@@ -128,7 +128,7 @@
       padding: 0 1em;
     }
     a {
-      padding: 1.15em 1em 0.85em;
+      padding: 1em 1em 0.85em;
     }
   }
 }
