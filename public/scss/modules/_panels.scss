@@ -1,0 +1,53 @@
+// *************************************
+//
+//   Panels
+//
+// *************************************
+
+.panel {
+  overflow: hidden;
+  position: relative;
+
+}
+
+.panel-home {
+  background: url(../img/keyboard.jpg) center bottom no-repeat;
+  background-size: cover;
+  color: $offwhite;
+  text-shadow: 0 1px 0 rgba($black, 0.50);
+  &:after {
+    @include position(absolute, 0px 0px 0px 0px);
+    background-color: rgba($grey, 0.80);
+    content: '';
+  }
+  .panel-img {
+    @include respond-to($l-min-medium) {
+      @include position(absolute, 0px 0 0 -300px);
+      background: url(../img/brand-icon.svg) no-repeat;
+      background-size: contain;
+      height: 450px;
+      width: 290px;
+    }
+    @include respond-to($l-min-large) {
+      left: -350px;
+      top: -2em;
+    }
+  }
+  .panel-content {
+    padding-top: 1em;
+    padding-bottom: 3em;
+    position: relative;
+    z-index: 10;
+    @include respond-to($l-min-medium) {
+      @include shift(4);
+      @include span-columns(8);
+      padding: 4em $base-whitespace 4em;
+    }
+  }
+  p a {
+    text-decoration: none;
+    &:hover {
+      color: $light-grey;
+    }
+  }
+}

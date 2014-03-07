@@ -1,0 +1,28 @@
+// *************************************
+//
+//   Buttons
+//
+// *************************************
+
+.btn {
+  @extend %t-shout;
+  display: inline-block;
+  font-family: $alt-fontFamily-medium;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.btn-a {
+  @extend %t-h4;
+  border: 2px solid $highlight;
+  color: $highlight;
+  padding: .75em 1em;
+  @include respond-to($l-min-small) {
+    font-size: 1.5em;
+  }
+  &:hover {
+    border-color: $xhighlight;
+    color: $xhighlight;
+  }
+}

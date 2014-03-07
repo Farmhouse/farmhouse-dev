@@ -8,8 +8,7 @@
 //   Headings
 // -------------------------------------
 
-h1, h2, h3, h4,
-%t-h1, %t-h2, %t-h3, %t-h4 {
+h1, h2, h3, h4 {
   @extend %t-shout;
   color: $base-color;
   font-family: $alt-fontFamily-medium;
@@ -46,8 +45,17 @@ small,
   font-size: 0.75em;
 }
 
-%t-shout {
+%t-shout,
+.t-shout {
   text-transform: uppercase;
+}
+
+.t-lead {
+  @extend %t-h4;
+  line-height: 1.75;
+  @include respond-to($l-min-small) {
+    font-size: 1.5em;
+  }
 }
 
 
