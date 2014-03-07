@@ -1,0 +1,53 @@
+// *************************************
+//
+//   Forms
+//
+// *************************************
+
+label {
+  display: block;
+  margin-bottom: 1em;
+}
+
+textarea,
+#{$all-text-inputs} {
+  @include transition(box-shadow 0.30s ease-in-out);
+  background-color: $base-background;
+  border: 1px solid $light-grey;
+  color: $base-color;
+  font-family: $alt-fontFamily;
+  font-size: 1em;
+  outline: none;
+  padding: .25em .5em;
+  width: 100%;
+  &:focus {
+    border-color: rgba($white, 0.80);
+    box-shadow: 0 0 2px $highlight, 0 0 5px $highlight;
+  }
+}
+
+.light-form {
+  #{$all-text-inputs} {
+    background-color: transparent;
+    border-color: $white;
+    color: $white;
+    &:focus {
+      border-color: rgba($white, 0.80);
+      box-shadow: 0 0 2px $highlight, 0 0 5px $highlight;
+    }
+  }
+}
+
+.form-single-field {
+  position: relative;
+  .btn {
+    @include position(absolute, 0px 0px 0 0);
+  }
+  .btn {
+    padding-top: .25em;
+    padding-bottom: .25em;
+  }
+  #{$all-text-inputs} {
+    padding-right: 4em;
+  }
+}
