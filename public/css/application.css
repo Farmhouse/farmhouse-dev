@@ -451,6 +451,56 @@ a {
   a:focus, a:hover {
     color: inherit; }
 
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  30% {
+    -webkit-transform: rotate(-100deg); }
+
+  50% {
+    -webkit-transform: rotate(-75deg); }
+
+  70% {
+    -webkit-transform: rotate(-95deg); }
+
+  85% {
+    -webkit-transform: rotate(-80deg); }
+
+  100% {
+    -webkit-transform: rotate(-90deg); } }
+
+@keyframes wobble {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+
+  30% {
+    -webkit-transform: rotate(-100deg);
+    -ms-transform: rotate(-100deg);
+    transform: rotate(-100deg); }
+
+  50% {
+    -webkit-transform: rotate(-75deg);
+    -ms-transform: rotate(-75deg);
+    transform: rotate(-75deg); }
+
+  70% {
+    -webkit-transform: rotate(-95deg);
+    -ms-transform: rotate(-95deg);
+    transform: rotate(-95deg); }
+
+  85% {
+    -webkit-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    transform: rotate(-80deg); }
+
+  100% {
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg); } }
+
 [role=banner] {
   position: fixed;
   top: 0px;
@@ -502,7 +552,7 @@ a {
 @media screen and (max-width: 624px) {
   .hero {
     background-color: #252422;
-    padding-top: 3.4em; } }
+    padding-top: 3em; } }
 
 .hero-img {
   -webkit-transition: margin-top 0.5s ease-out;
@@ -554,12 +604,6 @@ a {
   position: absolute;
   top: -5px;
   right: 0px;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-property: ease;
-  transition-property: ease;
   background-image: url(../img/brand-icon-white.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -569,9 +613,10 @@ a {
   width: 17px;
   z-index: 100; }
   .opened + .nav-toggle {
-    -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
+    -webkit-animation: wobble 1s ease-out;
+    animation: wobble 1s ease-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
 
 @media screen and (max-width: 849px) {
   [role=navigation] {

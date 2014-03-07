@@ -7,7 +7,7 @@
 .hero {
   @include respond-to($l-max-small, max-width) {
     background-color: $alt-background;
-    padding-top: 3.4em;
+    padding-top: 3em;
   }
 }
 

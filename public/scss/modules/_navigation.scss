@@ -70,9 +70,6 @@
 .nav-toggle {
   @include hide-text;
   @include position(absolute, -5px 0px 0 0);
-  @include transition-property(transform);
-  @include transition-duration(0.5s);
-  @include transition-property(ease);
   background-image: url(../img/brand-icon-white.svg);
   background-position: center;
   background-repeat: no-repeat;
@@ -81,7 +78,8 @@
   width: 17px;
   z-index: 100;
   .opened + & {
-    @include transform(rotate(-45deg));
+    @include animation(wobble 1.0s ease-out);
+    @include animation-fill-mode(forwards);
   }
 }
 
