@@ -1,19 +1,37 @@
 // *************************************
 //
-//   Panels
+//   Components
 //
 // *************************************
 
-.panel {
-  overflow: hidden;
-  position: relative;
 
+// -------------------------------------
+//   Hero
+// -------------------------------------
+
+.hero {
+  @include respond-to($l-max-small, max-width) {
+    background-color: $alt-background;
+    padding-top: 3em;
+  }
 }
+
+.hero-img {
+  @include transition(margin-top .5s ease-out);
+  width: 100%;
+}
+
+
+// -------------------------------------
+//   Home Middle Panel
+// -------------------------------------
 
 .panel-home {
   background: url(../img/keyboard.jpg) center bottom no-repeat;
   background-size: cover;
   color: $offwhite;
+  overflow: hidden;
+  position: relative;
   text-shadow: 0 1px 0 rgba($black, 0.50);
   &:after {
     @include position(absolute, 0px 0px 0px 0px);
@@ -32,6 +50,12 @@
       left: -350px;
       top: -2em;
     }
+    @include respond-to($l-min-xlarge) {
+      left: -450px;
+      top: -2em;
+      height: 600px;
+      width: 375px;
+    }
   }
   .panel-content {
     padding-top: 1em;
@@ -49,5 +73,32 @@
     &:hover {
       color: $light-grey;
     }
+  }
+}
+
+
+// -------------------------------------
+//   Features
+// -------------------------------------
+
+.feature {
+  @include respond-to($l-max-small, max-width) {
+    margin-top: 4em;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  @include respond-to($l-min-small) {
+    @include span-columns(4);
+  }
+  > a {
+    text-decoration: none;
+  }
+  h3 {
+    @extend %t-h5;
+    line-height: $base-lineHeight;
+  }
+  p {
+    font-family: $alt-fontFamily;
   }
 }

@@ -403,6 +403,9 @@ textarea {
   resize: vertical; }
 
 .l-container {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   *zoom: 1;
   max-width: 87.85714em;
   margin-left: auto;
@@ -417,10 +420,13 @@ textarea {
     .l-container {
       padding: 0 4.8%; } }
 
+[role=main] {
+  padding: 2em 0; }
 
 
 
-h1, h2, h3, h4 {
+
+h1, h2, h3, h4, h5 {
   color: #504e4e;
   font-family: 'alright-sans-medium';
   font-style: normal;
@@ -442,10 +448,13 @@ h3 {
 .t-lead, .btn-a {
   font-size: 1.333em; }
 
+.feature h3 {
+  font-size: 1em; }
+
 small {
   font-size: 0.75em; }
 
-h1, h2, h3, h4, [role=banner], .btn {
+h1, h2, h3, h4, h5, [role=banner], .btn {
   text-transform: uppercase; }
 
 .t-lead {
@@ -586,6 +595,82 @@ a {
   transition: margin-top 0.5s ease-out;
   width: 100%; }
 
+.panel-home {
+  background: url(../img/keyboard.jpg) center bottom no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: #f1e9de;
+  overflow: hidden;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); }
+  .panel-home:after {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(56, 56, 57, 0.8);
+    content: ''; }
+  @media screen and (min-width: 850px) {
+    .panel-home .panel-img {
+      position: absolute;
+      top: 0px;
+      left: -300px;
+      background: url(../img/brand-icon.svg) no-repeat;
+      -webkit-background-size: contain;
+      background-size: contain;
+      height: 450px;
+      width: 290px; } }
+  @media screen and (min-width: 1170px) {
+    .panel-home .panel-img {
+      left: -350px;
+      top: -2em; } }
+  @media screen and (min-width: 1600px) {
+    .panel-home .panel-img {
+      left: -450px;
+      top: -2em;
+      height: 600px;
+      width: 375px; } }
+  .panel-home .panel-content {
+    padding-top: 1em;
+    padding-bottom: 3em;
+    position: relative;
+    z-index: 10; }
+    @media screen and (min-width: 850px) {
+      .panel-home .panel-content {
+        margin-left: 34.18803%;
+        float: left;
+        display: block;
+        margin-right: 2.5641%;
+        width: 65.81197%;
+        padding: 4em 30px 4em; }
+        .panel-home .panel-content:last-child {
+          margin-right: 0; } }
+  .panel-home p a {
+    text-decoration: none; }
+    .panel-home p a:hover {
+      color: #929190; }
+
+@media screen and (max-width: 624px) {
+  .feature {
+    margin-top: 4em; }
+    .feature:first-child {
+      margin-top: 0; } }
+@media screen and (min-width: 625px) {
+  .feature {
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 31.62393%; }
+    .feature:last-child {
+      margin-right: 0; } }
+.feature > a {
+  text-decoration: none; }
+.feature h3 {
+  line-height: 1.4; }
+.feature p {
+  font-family: 'alright-sans-regular'; }
+
 @media (max-width: 849px) {
   .nav-collapse ul {
     width: 100%;
@@ -688,57 +773,5 @@ a {
     padding: 0 1em; }
   .nav-main a {
     padding: 1em 1em 0.85em; } }
-
-.panel {
-  overflow: hidden;
-  position: relative; }
-
-.panel-home {
-  background: url(../img/keyboard.jpg) center bottom no-repeat;
-  -webkit-background-size: cover;
-  background-size: cover;
-  color: #f1e9de;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5); }
-  .panel-home:after {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(56, 56, 57, 0.8);
-    content: ''; }
-  @media screen and (min-width: 850px) {
-    .panel-home .panel-img {
-      position: absolute;
-      top: 0px;
-      left: -300px;
-      background: url(../img/brand-icon.svg) no-repeat;
-      -webkit-background-size: contain;
-      background-size: contain;
-      height: 450px;
-      width: 290px; } }
-  @media screen and (min-width: 1170px) {
-    .panel-home .panel-img {
-      left: -350px;
-      top: -2em; } }
-  .panel-home .panel-content {
-    padding-top: 1em;
-    padding-bottom: 3em;
-    position: relative;
-    z-index: 10; }
-    @media screen and (min-width: 850px) {
-      .panel-home .panel-content {
-        margin-left: 34.18803%;
-        float: left;
-        display: block;
-        margin-right: 2.5641%;
-        width: 65.81197%;
-        padding: 4em 30px 4em; }
-        .panel-home .panel-content:last-child {
-          margin-right: 0; } }
-  .panel-home p a {
-    text-decoration: none; }
-    .panel-home p a:hover {
-      color: #929190; }
 
 /*# sourceMappingURL=application.map */

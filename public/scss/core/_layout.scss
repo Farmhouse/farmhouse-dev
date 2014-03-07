@@ -9,11 +9,16 @@
 // -------------------------------------
 
 .l-container {
+  @include box-sizing(content-box);
   @include outer-container;
   padding: 0 percent($base-whitespace, $l-site-width);
   @include respond-to($l-max-small, max-width) {
     padding: 0 percent($base-whitespace, $l-min-small);
   }
+}
+
+[role=main] {
+  padding: 2em 0;
 }
 
 
