@@ -15,6 +15,7 @@
 
 .btn-a {
   @extend %t-h4;
+  @include transition(color 0.30s ease, border-color 0.30s ease);
   border: 2px solid $highlight;
   color: $highlight;
   padding: .75em 1em;
