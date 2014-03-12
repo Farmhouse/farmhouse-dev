@@ -647,6 +647,9 @@ a {
   line-height: 1.4; }
 .feature p {
   font-family: 'alright-sans-regular'; }
+.feature img {
+  display: block;
+  width: 100%; }
 
 .h-card p {
   margin: 0; }
