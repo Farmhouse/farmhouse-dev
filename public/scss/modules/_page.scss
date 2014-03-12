@@ -112,13 +112,14 @@
 }
 @media screen and (min-width: 1150px) {
   [role=contentinfo] .h-card {
-    @include span-columns(6);
+    @include span-columns(5);
   }
   .footer-mailing {
     @include span-columns(3);
   }
   .footer-copyright {
-    @include span-columns(3);
-    clear: none;
+    bottom: 0;
+    position: absolute;
+    right: percent($base-whitespace, $l-site-width);
   }
 }
