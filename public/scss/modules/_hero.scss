@@ -5,13 +5,62 @@
 // *************************************
 
 .hero {
-  @include respond-to($l-max-small, max-width) {
-    background-color: $alt-background;
-    padding-top: 3em;
+  @include clearfix;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  padding-top: 3em;
+  @include respond-to($l-min-medium) {
+    padding-top: 4em;
+  }
+  @include respond-to($l-min-large) {
+    padding-top: 6em;
+  }
+}
+
+.hero-container {
+  @include respond-to($l-min-medium) {
+    @include outer-container;
+    padding: 0 percent($base-whitespace, $l-site-width);
   }
 }
 
 .hero-img {
   @include transition(margin-top .5s ease-out);
   width: 100%;
+}
+
+.hero-content {
+  background: rgba($white, 0.6);
+  overflow: hidden;
+  padding: 2em percent($base-whitespace, $l-site-width);
+  @include respond-to($l-min-medium) {
+    @include span-columns(8);
+    @include shift(4);
+    margin-top: $l-double-whitespace;
+    margin-bottom: $l-double-whitespace;
+  }
+  @include respond-to($l-min-large) {
+    @include span-columns(6);
+    @include shift(6);
+    margin-top: 13em;
+    margin-bottom: 4em;
+  }
+  h2 {
+    margin-top: 0;
+    @include respond-to($l-min-medium) {
+      font-size: 3.157em;
+    }
+  }
+  h3 {
+    font-family: $base-fontFamily;
+    text-transform: none;
+  }
+}
+
+.hero-footer {
+  p {
+    @extend .t-shout;
+    font-family: $alt-fontFamily-bold;
+  }
 }

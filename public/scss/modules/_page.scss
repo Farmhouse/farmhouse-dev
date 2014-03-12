@@ -9,7 +9,7 @@
 // -------------------------------------
 
 [role=banner] {
-  @extend %t-shout;
+  @extend .t-shout;
   @include position(fixed, 0px 0 0 0px);
   background: rgba($alt-background, 0.60);
   box-shadow: 0 2px 3px rgba($alt-background, 0.30);
@@ -71,7 +71,7 @@
   label,
   .btn,
   #{$all-text-inputs} {
-    @extend %t-small;
+    @extend .t-small;
   }
   p,
   label {
@@ -96,7 +96,7 @@
 
 .footer-copyright {
   @include span-columns(12);
-  @extend %t-shout;
+  @extend .t-shout;
   font-family: $alt-fontFamily-medium;
   text-align: right;
 }

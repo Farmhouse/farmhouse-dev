@@ -427,7 +427,7 @@ textarea {
 
 
 h1, h2, h3, h4, h5 {
-  color: #504e4e;
+  color: #252422;
   font-family: 'alright-sans-medium';
   font-style: normal;
   font-weight: normal;
@@ -439,22 +439,32 @@ h1 {
   font-size: 3.157em;
   margin-top: 0; }
 
+
 h2 {
   font-size: 2.369em; }
+
 
 h3 {
   font-size: 1.777em; }
 
-.t-lead, .btn-a {
+
+h4 {
   font-size: 1.333em; }
+
+.t-lead, .btn-a, .btn-c {
+  font-size: 1.333em; }
+
+h5 {
+  font-size: 1em; }
 
 .feature h3 {
   font-size: 1em; }
 
-[role=contentinfo] p, [role=contentinfo] label, [role=contentinfo] .btn, [role=contentinfo] input[type="email"], [role=contentinfo] input[type="number"], [role=contentinfo] input[type="password"], [role=contentinfo] input[type="search"], [role=contentinfo] input[type="tel"], [role=contentinfo] input[type="text"], [role=contentinfo] input[type="url"], [role=contentinfo] input[type="color"], [role=contentinfo] input[type="date"], [role=contentinfo] input[type="datetime"], [role=contentinfo] input[type="datetime-local"], [role=contentinfo] input[type="month"], [role=contentinfo] input[type="time"], [role=contentinfo] input[type="week"] {
+small {
   font-size: 0.85714em; }
 
-h1, h2, h3, h4, h5, .btn, [role=banner], .footer-copyright {
+
+.t-shout, h1, h2, h3, h4, h5, .btn, .hero-footer p, [role=banner], .footer-copyright {
   text-transform: uppercase; }
 
 .t-lead {
@@ -545,6 +555,11 @@ a {
   color: #252422;
   padding: 0.25em 0.75em 0.15em;
   text-align: center; }
+
+.btn-c {
+  background: #3cb878;
+  color: #fff;
+  padding: 0.5em 1em; }
 
 @media screen and (max-width: 624px) {
   .hero {
@@ -678,6 +693,81 @@ textarea, input[type="email"], input[type="number"], input[type="password"], inp
     padding-bottom: 0.25em; }
   .form-single-field input[type="email"], .form-single-field input[type="number"], .form-single-field input[type="password"], .form-single-field input[type="search"], .form-single-field input[type="tel"], .form-single-field input[type="text"], .form-single-field input[type="url"], .form-single-field input[type="color"], .form-single-field input[type="date"], .form-single-field input[type="datetime"], .form-single-field input[type="datetime-local"], .form-single-field input[type="month"], .form-single-field input[type="time"], .form-single-field input[type="week"] {
     padding-right: 4em; }
+
+.hero {
+  *zoom: 1;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: relative;
+  padding-top: 3em; }
+  .hero:before, .hero:after {
+    content: " ";
+    display: table; }
+  .hero:after {
+    clear: both; }
+  @media screen and (min-width: 850px) {
+    .hero {
+      padding-top: 4em; } }
+  @media screen and (min-width: 1170px) {
+    .hero {
+      padding-top: 6em; } }
+
+@media screen and (min-width: 850px) {
+  .hero-container {
+    *zoom: 1;
+    max-width: 87.85714em;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 2.43902%; }
+    .hero-container:before, .hero-container:after {
+      content: " ";
+      display: table; }
+    .hero-container:after {
+      clear: both; } }
+
+.hero-img {
+  -webkit-transition: margin-top 0.5s ease-out;
+  transition: margin-top 0.5s ease-out;
+  width: 100%; }
+
+.hero-content {
+  background: rgba(255, 255, 255, 0.6);
+  overflow: hidden;
+  padding: 2em 2.43902%; }
+  @media screen and (min-width: 850px) {
+    .hero-content {
+      float: left;
+      display: block;
+      margin-right: 2.5641%;
+      width: 65.81197%;
+      margin-left: 34.18803%;
+      margin-top: 60px;
+      margin-bottom: 60px; }
+      .hero-content:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 1170px) {
+    .hero-content {
+      float: left;
+      display: block;
+      margin-right: 2.5641%;
+      width: 48.71795%;
+      margin-left: 51.28205%;
+      margin-top: 13em;
+      margin-bottom: 4em; }
+      .hero-content:last-child {
+        margin-right: 0; } }
+  .hero-content h2 {
+    margin-top: 0; }
+    @media screen and (min-width: 850px) {
+      .hero-content h2 {
+        font-size: 3.157em; } }
+  .hero-content h3 {
+    font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+    text-transform: none; }
+
+.hero-footer p {
+  font-family: 'alright-sans-bold'; }
 
 @media (max-width: 849px) {
   .nav-collapse ul {

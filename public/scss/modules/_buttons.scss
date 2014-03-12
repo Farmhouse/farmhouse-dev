@@ -5,7 +5,7 @@
 // *************************************
 
 .btn {
-  @extend %t-shout;
+  @extend .t-shout;
   display: inline-block;
   font-family: $alt-fontFamily-medium;
   text-align: center;
@@ -13,6 +13,7 @@
   text-shadow: none;
 }
 
+// Orange outline button
 .btn-a {
   @extend %t-h4;
   @include transition(color 0.30s ease, border-color 0.30s ease);
@@ -28,10 +29,19 @@
   }
 }
 
+// White button
 .btn-b {
   background: $white;
   border: 1px solid $white;
   color: $alt-color;
   padding: .25em .75em .15em;
   text-align: center;
+}
+
+// Green button
+.btn-c {
+  @extend %t-h4;
+  background: $alt-highlight;
+  color: $white;
+  padding: .5em 1em;
 }

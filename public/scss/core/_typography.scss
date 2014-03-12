@@ -9,8 +9,8 @@
 // -------------------------------------
 
 h1, h2, h3, h4, h5 {
-  @extend %t-shout;
-  color: $base-color;
+  @extend .t-shout;
+  color: $alt-color;
   font-family: $alt-fontFamily-medium;
   font-style: normal;
   font-weight: normal;
@@ -18,39 +18,50 @@ h1, h2, h3, h4, h5 {
   margin: 1.414em 0 0.5em;
 }
 
-h1,
-%t-h1 {
+h1 {
   font-family: $alt-fontFamily-bold;
   font-size: 3.157em;
   margin-top: 0;
 }
+%t-h1 {
+  font-size: 3.157em;
+}
 
-h2,
+h2 {
+  font-size: 2.369em;
+}
 %t-h2 {
   font-size: 2.369em;
 }
 
-h3,
+h3 {
+  font-size: 1.777em;
+}
 %t-h3 {
   font-size: 1.777em;
 }
 
-h4,
+h4 {
+  font-size: 1.333em;
+}
 %t-h4 {
   font-size: 1.333em;
 }
 
-h5,
+h5 {
+  font-size: 1em;
+}
 %t-h5 {
   font-size: 1em;
 }
 
-small,
+small {
+  font-size: 0.85714286em;
+}
 %t-small {
   font-size: 0.85714286em;
 }
 
-%t-shout,
 .t-shout {
   text-transform: uppercase;
 }
