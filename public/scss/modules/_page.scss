@@ -62,8 +62,10 @@
 [role=contentinfo] {
   background: $alt-background;
   font-family: $alt-fontFamily;
+  font-size: .92857143em;
   padding-top: 2em;
   h4 {
+    @extend %t-h5;
     color: $light-grey;
     margin-top: 0;
   }
