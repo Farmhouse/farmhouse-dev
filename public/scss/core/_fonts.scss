@@ -10,36 +10,44 @@
 
 @font-face {
     font-family: 'alright-sans-regular';
+    src: url('/fonts/alrightsans-regular-webfont.eot');
     src: url('/fonts/alrightsans-regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/alrightsans-regular-webfont.woff') format('woff'),
-         url('/fonts/alrightsans-regular-webfont.ttf') format('truetype');
+         url('/fonts/alrightsans-regular-webfont.ttf') format('truetype'),
+         url('/fonts/alrightsans-regular-webfont.svg#alright_sansregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'alright-sans-regular-italic';
+    src: url('/fonts/alrightsans-regularitalic-webfont.eot');
     src: url('/fonts/alrightsans-regularitalic-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/alrightsans-regularitalic-webfont.woff') format('woff'),
-         url('/fonts/alrightsans-regularitalic-webfont.ttf') format('truetype');
+         url('/fonts/alrightsans-regularitalic-webfont.ttf') format('truetype'),
+         url('/fonts/alrightsans-regularitalic-webfont.svg#alright_sansregular_italic') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'alright-sans-medium';
+    src: url('/fonts/alrightsans-medium-webfont.eot');
     src: url('/fonts/alrightsans-medium-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/alrightsans-medium-webfont.woff') format('woff'),
-         url('/fonts/alrightsans-medium-webfont.ttf') format('truetype');
+         url('/fonts/alrightsans-medium-webfont.ttf') format('truetype'),
+         url('/fonts/alrightsans-medium-webfont.svg#alright_sansmedium') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'alright-sans-bold';
+    src: url('/fonts/alrightsans-bold-webfont.eot');
     src: url('/fonts/alrightsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('/fonts/alrightsans-bold-webfont.woff') format('woff'),
-         url('/fonts/alrightsans-bold-webfont.ttf') format('truetype');
+         url('/fonts/alrightsans-bold-webfont.ttf') format('truetype'),
+         url('/fonts/alrightsans-bold-webfont.svg#alright_sansbold') format('svg');
     font-weight: normal;
     font-style: normal;
 }
