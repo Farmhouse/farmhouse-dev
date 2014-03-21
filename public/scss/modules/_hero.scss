@@ -6,7 +6,7 @@
 
 .hero {
   @include clearfix;
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
   position: relative;
   padding-top: 3em;
@@ -24,7 +24,7 @@
 
 .hero-container {
   @include respond-to($l-min-medium) {
-    @include outer-container;
+    @include row;
     padding: 0 percent($base-whitespace, $l-site-width);
   }
 }

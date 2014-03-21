@@ -873,7 +873,7 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
 
 .hero {
   *zoom: 1;
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
   position: relative;
   padding-top: 3em; }
@@ -895,9 +895,7 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
 @media screen and (min-width: 850px) {
   .hero-container {
     *zoom: 1;
-    max-width: 87.85714em;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
     padding: 0 2.43902%; }
     .hero-container:before, .hero-container:after {
       content: " ";
@@ -914,20 +912,26 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
   padding: 2em 2.43902%; }
   @media screen and (min-width: 850px) {
     .hero-content {
-      display: table-cell;
-      padding-right: 2.24359%;
-      width: 68.05556%;
+      float: left;
+      display: block;
+      margin-right: 2.5641%;
+      width: 65.81197%;
       margin-left: 34.18803%;
       margin-top: 60px;
-      margin-bottom: 60px; } }
+      margin-bottom: 60px; }
+      .hero-content:last-child {
+        margin-right: 0; } }
   @media screen and (min-width: 1170px) {
     .hero-content {
-      display: table-cell;
-      padding-right: 2.13675%;
-      width: 50.8547%;
+      float: left;
+      display: block;
+      margin-right: 2.5641%;
+      width: 48.71795%;
       margin-left: 51.28205%;
       margin-top: 13em;
-      margin-bottom: 4em; } }
+      margin-bottom: 4em; }
+      .hero-content:last-child {
+        margin-right: 0; } }
   .hero-content h2 {
     margin-top: 0; }
     @media screen and (min-width: 850px) {
@@ -1109,54 +1113,78 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
     color: white; }
 
 .footer-find-us {
-  display: table-cell;
-  padding-right: 2.24359%;
-  width: 68.05556%;
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 65.81197%;
   background: url(../img/brand-icon-white.svg) no-repeat;
   background-size: contain;
   padding-left: 80px; }
+  .footer-find-us:last-child {
+    margin-right: 0; }
 
 .footer-contact {
-  display: table-cell;
-  padding-right: 1.92308%;
-  width: 33.54701%; }
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 31.62393%; }
+  .footer-contact:last-child {
+    margin-right: 0; }
 
 .footer-mailing {
-  display: table-cell;
-  padding-right: 2.35043%;
-  width: 102.35043%;
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 100%;
   margin-top: 2em;
   margin-bottom: 2em; }
+  .footer-mailing:last-child {
+    margin-right: 0; }
 
 .footer-copyright {
-  display: table-cell;
-  padding-right: 2.35043%;
-  width: 102.35043%;
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 100%;
   font-family: "alright-sans-medium";
   text-align: right; }
+  .footer-copyright:last-child {
+    margin-right: 0; }
 
 @media screen and (min-width: 625px) {
   [role=contentinfo] .h-card {
-    display: table-cell;
-    padding-right: 2.1978%;
-    width: 59.46276%; }
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 57.26496%; }
+    [role=contentinfo] .h-card:last-child {
+      margin-right: 0; }
 
   .footer-mailing {
-    display: table-cell;
-    padding-right: 2.05128%;
-    width: 42.22222%;
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 40.17094%;
     margin-right: 0;
-    margin-top: 0; } }
+    margin-top: 0; }
+    .footer-mailing:last-child {
+      margin-right: 0; } }
 @media screen and (min-width: 1150px) {
   [role=contentinfo] .h-card {
-    display: table-cell;
-    padding-right: 2.05128%;
-    width: 42.22222%; }
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 40.17094%; }
+    [role=contentinfo] .h-card:last-child {
+      margin-right: 0; }
 
   .footer-mailing {
-    display: table-cell;
-    padding-right: 1.7094%;
-    width: 24.78632%; }
+    float: left;
+    display: block;
+    margin-right: 2.5641%;
+    width: 23.07692%; }
+    .footer-mailing:last-child {
+      margin-right: 0; }
 
   .footer-copyright {
     bottom: 0;
