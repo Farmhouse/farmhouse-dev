@@ -4,24 +4,6 @@
 //
 // *************************************
 
-
-// -------------------------------------
-//   Hero
-// -------------------------------------
-
-.hero {
-  @include respond-to($l-max-small, max-width) {
-    background-color: $alt-background;
-    padding-top: 3em;
-  }
-}
-
-.hero-img {
-  @include transition(margin-top .5s ease-out);
-  width: 100%;
-}
-
-
 // -------------------------------------
 //   Home Middle Panel
 // -------------------------------------
@@ -117,4 +99,33 @@
 }
 .p-street-address {
   display: block;
+}
+
+
+// -------------------------------------
+//   Blog Profile
+// -------------------------------------
+
+.blog-profile {
+  @include row(table);
+  font-family: $alt-fontFamily;
+  margin-bottom: 3em;
+  p {
+    margin-bottom: .5em;
+  }
+  .profile-img {
+    @include span-columns(4);
+    @include pad(0px 0px 0px 0px);
+    img {
+      width: 100%;
+    }
+  }
+  .profile-body {
+    @include span-columns(8);
+    @include pad(0px 0px 0px $l-half-whitespace);
+    vertical-align: top;
+  }
+}
+.blog-contribution {
+  @extend .t-xsmall;
 }

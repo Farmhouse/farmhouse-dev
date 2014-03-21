@@ -29,8 +29,6 @@ $(function() {
 
 
   // Creates collapsed nav on mobile
-  responsiveNav(".nav-collapse", {openPos: "relative"});
+  responsiveNav(".nav-collapse", { openPos: "relative" });
 
 });
-
-

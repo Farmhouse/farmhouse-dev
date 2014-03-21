@@ -18,6 +18,10 @@
   }
 }
 
+.has-hero-img {
+  padding-top: 0;
+}
+
 .hero-container {
   @include respond-to($l-min-medium) {
     @include outer-container;
@@ -26,7 +30,6 @@
 }
 
 .hero-img {
-  @include transition(margin-top .5s ease-out);
   width: 100%;
 }
 

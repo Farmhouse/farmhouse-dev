@@ -18,14 +18,60 @@
   }
 }
 
-[role=main] {
-  padding: 2em 0;
+[role=main],
+[role=complementery] {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+
+// -------------------------------------
+//   Layouts
+// -------------------------------------
+
+// 2 Column, Sidebar Right
+.l-layout-a {
+  @include respond-to($l-min-medium) {
+    [role=main] {
+      @include span-columns(8);
+    }
+    [role=complementery] {
+      @include span-columns(4);
+    }
+  }
+  @include respond-to($l-min-large) {
+    [role=main] {
+      @include span-columns(9);
+    }
+    [role=complementery] {
+      @include span-columns(3);
+    }
+  }
 }
 
 
 // -------------------------------------
 //   Utilities
 // -------------------------------------
+
+.media {
+  @include clearfix;
+  > .media-img {
+    float: left;
+    margin-right: $l-half-whitespace;
+    > img {
+      display: block;
+    }
+  }
+  > .media-img-ext {
+    float: right;
+    margin-left: $l-half-whitespace;
+    margin-right: 0;
+  }
+  > .media-body {
+    @include clearfix;
+  }
+}
 
 %l-pullLeft {
   float: left;
