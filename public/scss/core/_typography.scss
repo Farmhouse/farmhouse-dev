@@ -24,15 +24,9 @@ h1,
   font-size: 3.157em;
   margin-top: 0;
 }
-%t-h1 {
-  font-size: 3.157em;
-}
 
 h2,
 .t-h2{
-  font-size: 2.369em;
-}
-%t-h2 {
   font-size: 2.369em;
 }
 
@@ -40,15 +34,9 @@ h3,
 .t-h3{
   font-size: 1.777em;
 }
-%t-h3 {
-  font-size: 1.777em;
-}
 
 h4,
 .t-h4{
-  font-size: 1.333em;
-}
-%t-h4 {
   font-size: 1.333em;
 }
 
@@ -56,15 +44,9 @@ h5,
 .t-h5{
   font-size: 1em;
 }
-%t-h5 {
-  font-size: 1em;
-}
 
 small,
 .t-small {
-  font-size: 0.85714286em;
-}
-%t-small {
   font-size: 0.85714286em;
 }
 
@@ -80,7 +62,7 @@ small,
 }
 
 .t-hgroup-b {
-  border-bottom: 1px solid $grey;
+  border-bottom: 1px solid $dark-grey;
   margin-bottom: 2em;
   padding-bottom: 2em;
   h1, h2, h3, h4, h5 {
@@ -100,7 +82,7 @@ small,
 }
 
 .t-lead {
-  @extend %t-h4;
+  @extend .t-h4;
   line-height: 1.75;
   @include respond-to($l-min-small) {
     font-size: 1.5em;
@@ -130,4 +112,10 @@ blockquote {
   font-size: 1.28571429em;
   margin-left: 0;
   margin-right: 0;
+}
+
+figcaption {
+  @extend %t-small;
+  color: $grey;
+  margin-top: .5em;
 }

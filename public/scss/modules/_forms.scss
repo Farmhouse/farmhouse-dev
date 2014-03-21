@@ -13,7 +13,7 @@ textarea,
 #{$all-text-inputs} {
   @include transition(box-shadow 0.30s ease-in-out);
   background-color: $base-background;
-  border: 1px solid $light-grey;
+  border: 1px solid $grey;
   color: $base-color;
   font-family: $alt-fontFamily;
   font-size: 1em;

@@ -25,9 +25,19 @@ ul, ol {
   padding: 0;
 }
 
+.figures {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 img {
   display: inline-block;
-  max-width: 100%;
+  width: 100%;
 }
 
 audio,

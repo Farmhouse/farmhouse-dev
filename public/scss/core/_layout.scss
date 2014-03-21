@@ -24,6 +24,17 @@
   padding-bottom: 2em;
 }
 
+.l-row {
+  @include row();
+}
+
+.l-half {
+  @include span-columns(6);
+  &:last-child {
+    @include omega;
+  }
+}
+
 
 // -------------------------------------
 //   Layouts

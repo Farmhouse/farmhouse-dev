@@ -15,7 +15,7 @@
 
 // Orange outline button
 .btn-a {
-  @extend %t-h4;
+  @extend .t-h4;
   @include transition(color 0.30s ease, border-color 0.30s ease);
   border: 2px solid $highlight;
   color: $highlight;
@@ -40,7 +40,7 @@
 
 // Green button
 .btn-c {
-  @extend %t-h4;
+  @extend .t-h4;
   background: $alt-highlight;
   color: $white;
   padding: .5em 1em;

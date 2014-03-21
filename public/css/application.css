@@ -31,6 +31,11 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+.icon {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap; }
+
 @media screen and (min-width: 850px) {
   .show-mobile {
     display: none !important; } }
@@ -411,9 +416,17 @@ ul, ol {
   margin: 0;
   padding: 0; }
 
+.figures {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+
+figure {
+  margin-left: 0;
+  margin-right: 0; }
+
 img {
   display: inline-block;
-  max-width: 100%; }
+  width: 100%; }
 
 audio,
 canvas,
@@ -456,6 +469,25 @@ textarea {
 [role=complementery] {
   padding-top: 2em;
   padding-bottom: 2em; }
+
+.l-row {
+  *zoom: 1;
+  display: block; }
+  .l-row:before, .l-row:after {
+    content: " ";
+    display: table; }
+  .l-row:after {
+    clear: both; }
+
+.l-half {
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 48.71795%; }
+  .l-half:last-child {
+    margin-right: 0; }
+  .l-half:last-child {
+    margin-right: 0; }
 
 @media screen and (min-width: 850px) {
   .l-layout-a [role=main] {
@@ -535,17 +567,16 @@ h3,
   font-size: 1.777em; }
 
 h4,
-.t-h4 {
-  font-size: 1.333em; }
-
-.t-lead, .btn-a, .btn-c {
+.t-h4,
+.t-lead,
+.btn-a,
+.btn-c {
   font-size: 1.333em; }
 
 h5,
-.t-h5 {
-  font-size: 1em; }
-
-.feature h3, [role=contentinfo] h4 {
+.t-h5,
+.feature h3,
+[role=contentinfo] h4 {
   font-size: 1em; }
 
 small,
@@ -567,9 +598,6 @@ small,
 [role=contentinfo] input[type="month"],
 [role=contentinfo] input[type="time"],
 [role=contentinfo] input[type="week"] {
-  font-size: 0.85714286em; }
-
-.t-hgroup-b .t-hgroup-first {
   font-size: 0.85714286em; }
 
 .t-xsmall, .t-hgroup-b .t-hgroup-second, .blog-contribution {
@@ -608,6 +636,10 @@ blockquote {
   font-size: 1.28571429em;
   margin-left: 0;
   margin-right: 0; }
+
+figcaption {
+  color: #929190;
+  margin-top: .5em; }
 
 @-webkit-keyframes wobble {
   0% {
@@ -943,6 +975,25 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
 
 .hero-footer p {
   font-family: "alright-sans-bold"; }
+
+.icon {
+  display: inline-block; }
+
+.icon-web,
+.icon-twitter,
+.icon-instagram {
+  background-size: cover;
+  height: 35px;
+  width: 35px; }
+
+.icon-web {
+  background-image: url(../img/icon-globe.svg); }
+
+.icon-twitter {
+  background-image: url(../img/icon-twitter.svg); }
+
+.icon-instagram {
+  background-image: url(../img/icon-instagram.svg); }
 
 @media (max-width: 849px) {
   .nav-collapse ul {

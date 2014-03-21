@@ -50,6 +50,12 @@
   display: none !important;
 }
 
+%image-replace {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
 %visuallyhidden {
   position: absolute;
   overflow: hidden;

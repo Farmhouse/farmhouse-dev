@@ -1,0 +1,30 @@
+// *************************************
+//
+//   Icons
+//
+// *************************************
+
+.icon {
+  @extend %image-replace;
+  display: inline-block;
+}
+
+.icon-web,
+.icon-twitter,
+.icon-instagram {
+  background-size: cover;
+  height: 35px;
+  width: 35px;
+}
+
+.icon-web {
+  background-image: url(../img/icon-globe.svg);
+}
+
+.icon-twitter {
+  background-image: url(../img/icon-twitter.svg);
+}
+
+.icon-instagram {
+  background-image: url(../img/icon-instagram.svg);
+}
