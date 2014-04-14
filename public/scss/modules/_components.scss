@@ -129,3 +129,106 @@
 .blog-contribution {
   @extend .t-xsmall;
 }
+
+
+// -------------------------------------
+//   Profile Grid
+// -------------------------------------
+
+.profile-grid {
+  background: $xlight-grey;
+  text-align: center;
+}
+.profile-grid-title {
+  @extend .t-h4;
+  border: 2px solid $dark-grey;
+  display: inline-block;
+  margin: 2em 0;
+  padding: .75em;
+  @include respond-to($l-min-small) {
+    padding: .75em 5em;
+  }
+  @include respond-to($l-min-medium) {
+    font-size: 1.777em;
+  }
+}
+.profile-grid-profiles {
+  @include row();
+  text-align: left;
+  .h-card {
+    margin-bottom: 3em;
+    @media (max-width: $l-max-small) {
+      @include span-columns(6);
+      &:nth-child(2n) {
+        @include omega;
+      }
+    }
+    @media (min-width: $l-min-small) and (max-width: $l-max-medium) {
+      @include span-columns(4);
+      &:nth-child(3n) {
+        @include omega;
+      }
+    }
+    @media (min-width: $l-min-medium) {
+      @include span-columns(3);
+      &:nth-child(4n) {
+        @include omega;
+      }
+    }
+  }
+  img {
+    margin-bottom: 1em;
+  }
+  .p-name {
+    font-family: $alt-fontFamily;
+    text-transform: uppercase;
+  }
+  .icon {
+    margin-right: .5em;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  @include respond-to($l-min-small) {
+    .p-name {
+      float: left;
+      padding-top: .5em;
+    }
+    .social-links {
+      float: right;
+    }
+  }
+}
+
+
+// -------------------------------------
+//   Text Block
+// -------------------------------------
+
+.text-block {
+  text-align: center;
+  padding-bottom: 3em;
+}
+.text-block-title {
+  @extend .t-h4;
+  border-bottom: 1px solid $dark-grey;
+  display: inline-block;
+  margin-bottom: 2em;
+  padding-bottom: .5em;
+}
+.text-block-content {
+  text-align: left;
+  p {
+    font-size: 1.14285714em; // 16px / 14px
+    line-height: 1.5;
+  }
+  @include respond-to($l-min-small) {
+    @include row();
+    p {
+      @include span-columns(6);
+      &:last-child {
+        @include omega;
+      }
+    }
+  }
+}

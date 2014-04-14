@@ -570,7 +570,9 @@ h4,
 .t-h4,
 .t-lead,
 .btn-a,
-.btn-c {
+.btn-c,
+.profile-grid-title,
+.text-block-title {
   font-size: 1.333em; }
 
 h5,
@@ -861,6 +863,113 @@ figcaption {
     padding: 0px 0px 0px 15px;
     vertical-align: top; }
 
+.profile-grid {
+  background: #f3f3f3;
+  text-align: center; }
+
+.profile-grid-title {
+  border: 2px solid #383839;
+  display: inline-block;
+  margin: 2em 0;
+  padding: .75em; }
+  @media screen and (min-width: 625px) {
+    .profile-grid-title {
+      padding: .75em 5em; } }
+  @media screen and (min-width: 850px) {
+    .profile-grid-title {
+      font-size: 1.777em; } }
+
+.profile-grid-profiles {
+  *zoom: 1;
+  display: block;
+  text-align: left; }
+  .profile-grid-profiles:before, .profile-grid-profiles:after {
+    content: " ";
+    display: table; }
+  .profile-grid-profiles:after {
+    clear: both; }
+  .profile-grid-profiles .h-card {
+    margin-bottom: 3em; }
+    @media (max-width: 624px) {
+      .profile-grid-profiles .h-card {
+        float: left;
+        display: block;
+        margin-right: 2.5641%;
+        width: 48.71795%; }
+        .profile-grid-profiles .h-card:last-child {
+          margin-right: 0; }
+        .profile-grid-profiles .h-card:nth-child(2n) {
+          margin-right: 0; } }
+    @media (min-width: 625px) and (max-width: 849px) {
+      .profile-grid-profiles .h-card {
+        float: left;
+        display: block;
+        margin-right: 2.5641%;
+        width: 31.62393%; }
+        .profile-grid-profiles .h-card:last-child {
+          margin-right: 0; }
+        .profile-grid-profiles .h-card:nth-child(3n) {
+          margin-right: 0; } }
+    @media (min-width: 850px) {
+      .profile-grid-profiles .h-card {
+        float: left;
+        display: block;
+        margin-right: 2.5641%;
+        width: 23.07692%; }
+        .profile-grid-profiles .h-card:last-child {
+          margin-right: 0; }
+        .profile-grid-profiles .h-card:nth-child(4n) {
+          margin-right: 0; } }
+  .profile-grid-profiles img {
+    margin-bottom: 1em; }
+  .profile-grid-profiles .p-name {
+    font-family: "alright-sans-regular";
+    text-transform: uppercase; }
+  .profile-grid-profiles .icon {
+    margin-right: .5em; }
+    .profile-grid-profiles .icon:last-child {
+      margin-right: 0; }
+  @media screen and (min-width: 625px) {
+    .profile-grid-profiles .p-name {
+      float: left;
+      padding-top: .5em; }
+    .profile-grid-profiles .social-links {
+      float: right; } }
+
+.text-block {
+  text-align: center;
+  padding-bottom: 3em; }
+
+.text-block-title {
+  border-bottom: 1px solid #383839;
+  display: inline-block;
+  margin-bottom: 2em;
+  padding-bottom: .5em; }
+
+.text-block-content {
+  text-align: left; }
+  .text-block-content p {
+    font-size: 1.14285714em;
+    line-height: 1.5; }
+  @media screen and (min-width: 625px) {
+    .text-block-content {
+      *zoom: 1;
+      display: block; }
+      .text-block-content:before, .text-block-content:after {
+        content: " ";
+        display: table; }
+      .text-block-content:after {
+        clear: both; }
+      .text-block-content p {
+        float: left;
+        display: block;
+        margin-right: 2.5641%;
+        width: 48.71795%; }
+        .text-block-content p:last-child {
+          margin-right: 0; }
+        .text-block-content p:last-child {
+          margin-right: 0; } }
+
 label {
   display: block;
   margin-bottom: 1em; }
@@ -986,14 +1095,26 @@ input[type="email"], input[type="number"], input[type="password"], input[type="s
   height: 35px;
   width: 35px; }
 
+.icon-twitter-alt,
+.icon-instagram-alt {
+  background-size: cover;
+  height: 30px;
+  width: 30px; }
+
 .icon-web {
   background-image: url(../img/icon-globe.svg); }
 
 .icon-twitter {
   background-image: url(../img/icon-twitter.svg); }
 
+.icon-twitter-alt {
+  background-image: url(../img/icon-twitter-alt.svg); }
+
 .icon-instagram {
   background-image: url(../img/icon-instagram.svg); }
+
+.icon-instagram-alt {
+  background-image: url(../img/icon-instagram-alt.svg); }
 
 @media (max-width: 849px) {
   .nav-collapse ul {
