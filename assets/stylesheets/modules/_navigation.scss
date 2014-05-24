@@ -70,7 +70,7 @@
 .nav-toggle {
   @include hide-text;
   @include position(absolute, -5px 0px 0 0);
-  background-image: url(/images/brand-icon-white.svg);
+  background-image: url(/images/icons/brand-icon-white.svg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

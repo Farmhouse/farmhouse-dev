@@ -43,15 +43,40 @@ class App < Sinatra::Base
     expires 3600, :public, :must_revalidate
   end
 
+
   get '/' do
+    @title = 'The Farmhouse in Hollywood, California'
+
     erb :index
   end
 
+
   get '/about' do
+    @title = 'The Farmhouse: A Very Brief and Incomplete History'
+
+    @friends = [
+      {'name' => 'Shane Becker', 'image' => 'shane-becker.jpg', 'twitter' => 'veganstraightedge', 'instagram' => 'veganstraightedge'},
+      {'name' => 'Heather Peterson', 'image' => 'heather-peterson.jpg', 'twitter' => 'hrrrthrrr', 'instagram' => 'hrrrthrrr'},
+      {'name' => 'TJ Nelson Jr', 'image' => 'tj-nelson.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Kristen Reyes', 'image' => 'kristen-reyes.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Civ', 'image' => 'civ.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Evan Phoenix', 'image' => 'evan-phoenix.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Anneke Hiatt', 'image' => 'anneke-hiatt.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Bookis Smuin', 'image' => 'bookis-smuin.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'John Bender', 'image' => 'john-bender.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Brooke Graham', 'image' => 'brooke-graham.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Eli Duke', 'image' => 'eli-duke.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Mates of State', 'image' => 'mates-of-state.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Blue Ribbon Glee Club', 'image' => 'blue-ribbon-glee-club.jpg', 'twitter' => '', 'instagram' => ''},
+      {'name' => 'Bramble', 'image' => 'bramble.jpg', 'twitter' => '', 'instagram' => ''}
+    ]
+
     erb :about
   end
+
 
   get '/blog' do
     erb :blog
   end
+
 end

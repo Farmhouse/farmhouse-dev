@@ -21,102 +21,17 @@
       <h2 class="profile-grid-title">Friends of the Farmhouse</h2>
 
       <ul class="profile-grid-profiles">
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
-        <li class="h-card">
-          <img src="http://placehold.it/270x270" />
-          <p class="p-name">First Last</p>
-          <div class="social-links">
-            <a href="#" class="icon icon-twitter-alt">Twitter</a>
-            <a href="#" class="icon icon-instagram-alt">Instagram</a>
-          </div>
-        </li>
+
+        <% @friends.each do |friend|  %>
+          <li class="h-card">
+            <%= img "/images/friends/#{friend['image']}", :alt => "#{friend['name']}" %>
+            <p class="p-name"><%= friend['name'] %></p>
+            <div class="social-links">
+              <a href="http://twitter.com/<%= friend['twitter'] %>" class="icon icon-twitter-alt">Twitter</a>
+              <a href="http://instagram.com/<%= friend['instagram'] %>" class="icon icon-instagram-alt">Instagram</a>
+            </div>
+          </li>
+        <% end %>
 
       </ul>
 
