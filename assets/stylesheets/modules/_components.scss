@@ -9,7 +9,7 @@
 // -------------------------------------
 
 .panel-home {
-  background: url(../img/keyboard.jpg) center bottom no-repeat;
+  background: url(/images/keyboard.jpg) center bottom no-repeat;
   background-size: cover;
   color: $offwhite;
   overflow: hidden;
@@ -23,7 +23,7 @@
   .panel-img {
     @include respond-to($l-min-medium) {
       @include position(absolute, 0px 0 0 -300px);
-      background: url(../img/brand-icon.svg) no-repeat;
+      background: url(/images/brand-icon.svg) no-repeat;
       background-size: contain;
       height: 450px;
       width: 290px;

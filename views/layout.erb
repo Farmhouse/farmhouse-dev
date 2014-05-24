@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="author"      content="Shane Becker" />
+  <meta name="description" content="" />
+  <meta name="viewport"    content="width=device-width, initial-scale=1" />
+
+  <title></title>
+
+  <%= css :application %>
+
+  <script src="/js/vendor/modernizr.custom.22255.js"></script>
+
+</head>
+
+<body>
+
+  <%= erb :_header %>
+
+  <%= yield %>
+
+  <%= erb :_footer %>
+
+  <!-- Serve jQuery from Google CDN with local fallback -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+
+  <%= js :application %>
+
+</body>
+</html>

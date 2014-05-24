@@ -69,7 +69,7 @@ small,
     margin-top: 0;
   }
   .t-hgroup-first {
-    @extend %t-small;
+    @extend .t-small;
   }
   .t-hgroup-second {
     @extend .t-xsmall;
@@ -115,7 +115,7 @@ blockquote {
 }
 
 figcaption {
-  @extend %t-small;
+  @extend .t-small;
   color: $grey;
   margin-top: .5em;
 }

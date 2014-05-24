@@ -32,7 +32,7 @@
 
 .brand-logo {
   @include hide-text;
-  background-image: url(../img/brand-logo.svg);
+  background-image: url(/images/brand-logo.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -82,7 +82,7 @@
 }
 .footer-find-us {
   @include span-columns(8);
-  background: url(../img/brand-icon-white.svg) no-repeat;
+  background: url(/images/brand-icon-white.svg) no-repeat;
   background-size: contain;
   padding-left: 80px;
 }
