@@ -76,6 +76,8 @@ class App < Sinatra::Base
 
 
   get '/blog' do
+    @title = "The Farmhouse: News and Ponderings"
+
     erb :blog
   end
 
