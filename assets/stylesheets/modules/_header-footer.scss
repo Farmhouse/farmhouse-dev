@@ -73,7 +73,6 @@
   label,
   .btn,
   #{$all-text-inputs} {
-    @extend .t-small;
   }
   p,
   label {
@@ -120,7 +119,7 @@
     @include span-columns(3);
   }
   .footer-copyright {
-    bottom: 0;
+    bottom: 1em;
     position: absolute;
     right: percent($base-whitespace, $l-site-width);
   }
