@@ -13,7 +13,7 @@ textarea,
 #{$all-text-inputs} {
   @include transition(box-shadow 0.30s ease-in-out);
   background-color: $base-background;
-  border: 1px solid $grey;
+  border: none;
   color: $base-color;
   font-family: $alt-fontFamily;
   font-size: 1em;
@@ -26,10 +26,51 @@ textarea,
   }
 }
 
+textarea,
+input {
+  @include placeholder {
+    text-transform: uppercase;
+  }
+}
+
+.form {
+  .form-field {
+    margin-bottom: .5em;
+    @include respond-to($l-min-small) {
+      float: left;
+      width: 50%;
+      &:nth-of-type(2n) {
+        padding-left: .5em;
+      }
+    }
+  }
+  label {
+    @extend %visuallyhidden;
+    .no-placeholder & {
+      @extend .t-shout;
+      @extend %undo-visuallyhidden;
+      font-family: $alt-fontFamily;
+      margin-bottom: 0;
+    }
+  }
+  textarea,
+  #{$all-text-inputs} {
+    padding: 1em;
+  }
+  textarea {
+    height: 10em;
+  }
+  input[type=submit] {
+    float: right;
+    margin-top: 1em;
+  }
+}
+
+
 .light-form {
   #{$all-text-inputs} {
     background-color: transparent;
-    border-color: $white;
+    border: 1px solid $white;
     color: $white;
     &:focus {
       border-color: rgba($white, 0.80);

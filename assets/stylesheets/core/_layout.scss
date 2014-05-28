@@ -22,6 +22,9 @@
 [role=complementery] {
   padding-top: 2em;
   padding-bottom: 2em;
+  &.has-rows {
+    padding: 0;
+  }
 }
 
 .l-row {
@@ -61,28 +64,66 @@
 }
 
 
+// 2 columns, text on left,
+// image filling rest of space (Contact)
+.l-layout-b {
+  position: relative;
+  overflow: hidden;
+  .l-container {
+    position: static;
+  }
+  .content {
+    padding: 2em 0;
+  }
+  @include respond-to($l-max-small, max-width) {
+    img {
+      border-top: 5px solid $highlight;
+      margin-left: -6%;
+      width: 112%;
+    }
+  }
+  @include respond-to($l-min-small) {
+    .content {
+      @include span-columns(5);
+      padding: 5em 0;
+    }
+    img {
+      @include span-columns(7);
+      border-left: 5px solid $highlight;
+      border-top: none;
+      position: absolute;
+      right: 0;
+      .csstransforms & {
+        @include transform(translateY(-50%));
+        top: 50%;
+      }
+    }
+  }
+}
+
+
+// 2 columns, grey background (Contact)
+.l-layout-c {
+  background-color: $xlight-grey;
+  padding: 2em 0;
+  @include respond-to($l-min-medium) {
+    padding: 5em 0;
+    .col-1 {
+      @include span-columns(4);
+      font-size: em(21);
+    }
+    .col-2 {
+      @include span-columns(7);
+      @include shift(1);
+    }
+  }
+}
+
+
+
 // -------------------------------------
 //   Utilities
 // -------------------------------------
-
-.media {
-  @include clearfix;
-  > .media-img {
-    float: left;
-    margin-right: $l-half-whitespace;
-    > img {
-      display: block;
-    }
-  }
-  > .media-img-ext {
-    float: right;
-    margin-left: $l-half-whitespace;
-    margin-right: 0;
-  }
-  > .media-body {
-    @include clearfix;
-  }
-}
 
 %l-pullLeft {
   float: left;

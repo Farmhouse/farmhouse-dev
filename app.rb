@@ -2,10 +2,11 @@ class App < Sinatra::Base
   set :root, File.dirname(__FILE__)
   set :public_folder, File.dirname(__FILE__) + '/public'
 
+
   # This gets sass working with AssetPack
   set :scss, { :load_paths => [ "#{App.root}/assets/stylesheets/" ] }
-
   register Sinatra::AssetPack
+
 
   assets do
     serve '/images', :from => 'assets/images'
@@ -32,9 +33,14 @@ class App < Sinatra::Base
     css_compression :sass
   end
 
+
   helpers do
     def current_year
       Time.now.year
+    end
+
+    def google_map(options)
+      "//maps.googleapis.com/maps/api/staticmap?#{options}"
     end
   end
 
@@ -79,6 +85,23 @@ class App < Sinatra::Base
     @title = "The Farmhouse: News and Ponderings"
 
     erb :blog
+  end
+
+
+  get '/contact' do
+
+    # https://developers.google.com/maps/documentation/staticmaps/
+    map = {
+      'address' => "1558+Gordon+Street,Los+Angeles,CA",
+      'zoom' => "14",
+      'size' => "640x640",
+      'scale' => "2",
+      'markers' => "color:red%7C1558+Gordon+Street,Los+Angeles,CA"
+    }
+
+    @map_options = "center=#{map['address']}&zoom=#{map['zoom']}&scale=#{map['scale']}&size=#{map['size']}&markers=#{map['markers']}"
+
+    erb :contact
   end
 
 end

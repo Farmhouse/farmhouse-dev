@@ -4,24 +4,40 @@
 //
 // *************************************
 
-.icon {
+[class*=icon-] {
   @extend %image-replace;
   display: inline-block;
 }
 
 .icon-web,
-.icon-twitter,
-.icon-instagram {
+.icon-twitter-square,
+.icon-instagram-square {
   background-size: cover;
   height: 35px;
   width: 35px;
 }
 
-.icon-twitter-alt,
-.icon-instagram-alt {
-  background-size: cover;
+.icon-twitter,
+.icon-instagram,
+.icon-facebook,
+.icon-github,
+.icon-twitter-circle,
+.icon-instagram-circle {
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.icon-twitter-circle,
+.icon-instagram-circle {
   height: 30px;
   width: 30px;
+}
+
+.icon-twitter,
+.icon-instagram,
+.icon-facebook,
+.icon-github {
+  height: 24px;
 }
 
 .icon-web {
@@ -30,16 +46,36 @@
 
 .icon-twitter {
   background-image: url(/images/icons/icon-twitter.svg);
+  width: 30px;
 }
 
-.icon-twitter-alt {
-  background-image: url(/images/icons/icon-twitter-alt.svg);
+.icon-twitter-square {
+  background-image: url(/images/icons/icon-twitter-square.svg);
+}
+
+.icon-twitter-circle {
+  background-image: url(/images/icons/icon-twitter-circle.svg);
 }
 
 .icon-instagram {
   background-image: url(/images/icons/icon-instagram.svg);
+  width: 25px;
 }
 
-.icon-instagram-alt {
-  background-image: url(/images/icons/icon-instagram-alt.svg);
+.icon-instagram-square {
+  background-image: url(/images/icons/icon-instagram-square.svg);
+}
+
+.icon-instagram-circle {
+  background-image: url(/images/icons/icon-instagram-circle.svg);
+}
+
+.icon-facebook {
+  background-image: url(/images/icons/icon-facebook.svg);
+  width: 12px;
+}
+
+.icon-github {
+  background-image: url(/images/icons/icon-github.svg);
+  width: 25px;
 }

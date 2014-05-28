@@ -4,13 +4,16 @@
 //
 // *************************************
 
-.btn {
+[class*=btn] {
   @extend .t-shout;
   display: inline-block;
   font-family: $alt-fontFamily-medium;
   text-align: center;
   text-decoration: none;
   text-shadow: none;
+}
+h2[class*=btn] {
+  margin-top: 0;
 }
 
 // Orange outline button
@@ -19,7 +22,7 @@
   @include transition(color 0.30s ease, border-color 0.30s ease);
   border: 2px solid $highlight;
   color: $highlight;
-  padding: .75em 1em;
+  padding: .75em 2em;
   @include respond-to($l-min-small) {
     font-size: 1.5em;
   }
@@ -44,4 +47,13 @@
   background: $alt-highlight;
   color: $white;
   padding: .5em 1em;
+}
+
+// Black button
+.btn-d {
+  background: $black;
+  border: none;
+  color: $white;
+  letter-spacing: .05em;
+  padding: .5em 3em;
 }

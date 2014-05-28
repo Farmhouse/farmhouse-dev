@@ -5,61 +5,6 @@
 // *************************************
 
 // -------------------------------------
-//   Home Middle Panel
-// -------------------------------------
-
-.panel-home {
-  background: url(/images/keyboard.jpg) center bottom no-repeat;
-  background-size: cover;
-  color: $offwhite;
-  overflow: hidden;
-  position: relative;
-  text-shadow: 0 1px 0 rgba($black, 0.50);
-  &:after {
-    @include position(absolute, 0px 0px 0px 0px);
-    background-color: rgba($dark-grey, 0.80);
-    content: '';
-  }
-  .panel-img {
-    @include respond-to($l-min-medium) {
-      @include position(absolute, 0px 0 0 -300px);
-      background: url(/images/brand-icon.svg) no-repeat;
-      background-size: contain;
-      height: 450px;
-      width: 290px;
-    }
-    @include respond-to($l-min-large) {
-      left: -350px;
-      top: -2em;
-    }
-    @include respond-to($l-min-xlarge) {
-      left: -450px;
-      top: -2em;
-      height: 600px;
-      width: 375px;
-    }
-  }
-  .panel-content {
-    padding-top: 1em;
-    padding-bottom: 3em;
-    position: relative;
-    z-index: 10;
-    @include respond-to($l-min-medium) {
-      @include shift(4);
-      @include span-columns(8);
-      padding: 4em $base-whitespace 4em;
-    }
-  }
-  p a {
-    text-decoration: none;
-    &:hover {
-      color: $grey;
-    }
-  }
-}
-
-
-// -------------------------------------
 //   Features
 // -------------------------------------
 
@@ -99,6 +44,17 @@
 }
 .p-street-address {
   display: block;
+}
+
+[role=main] .h-card {
+  margin-bottom: 2em;
+  p {
+    font-family: $alt-fontFamily;
+    font-size: em(21);
+  }
+  .p-tel {
+    margin-top: 1em;
+  }
 }
 
 
@@ -229,6 +185,46 @@
       &:last-child {
         @include omega;
       }
+    }
+  }
+}
+
+
+// -------------------------------------
+//   Full Width Map
+// -------------------------------------
+
+.map {
+  height: 0;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 50%;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    .no-csstransforms & {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+    }
+    .csstransforms & {
+      @include transform(translateY(-50%));
+      top: 50%;
+    }
+  }
+}
+
+
+// -------------------------------------
+//   Link List
+// -------------------------------------
+
+.link-list {
+  a {
+    margin-left: $l-half-whitespace;
+    &:first-of-type {
+      margin-left: 0;
     }
   }
 }

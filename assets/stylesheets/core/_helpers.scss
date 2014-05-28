@@ -64,6 +64,14 @@
   margin: -1px; padding: 0; border: 0;
 }
 
+%undo-visuallyhidden {
+  position: static;
+  overflow: auto;
+  clip: none;
+  height: auto;
+  width: auto;
+}
+
 %show-mobile,
 .show-mobile {
   @include respond-to($l-min-medium) {
