@@ -11,7 +11,7 @@
 [role=banner] {
   @extend .t-shout;
   @include position(fixed, 0px 0 0 0px);
-  background: rgba($alt-background, 0.60);
+  background-color: rgba($alt-background, 0.60);
   box-shadow: 0 2px 3px rgba($alt-background, 0.30);
   font-family: $alt-fontFamily;
   padding: 1em 0;
@@ -28,11 +28,17 @@
     color: $white;
     text-decoration: none;
   }
+  &.light {
+    background-color: rgba($base-background, 0.60);
+    a {
+      color: $base-color;
+    }
+  }
 }
 
 .brand-logo {
   @include hide-text;
-  background-image: url(/images/brand-logo.svg);
+  background-image: url(/images/brand-logo-light.svg);
   background-position: left center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -40,6 +46,9 @@
   height: 14px;
   line-height: 1;
   width: 180px;
+  .light & {
+    background-image: url(/images/brand-logo.svg);
+  }
   @include respond-to($l-min-medium) {
     height: 21px;
     width: 270px;

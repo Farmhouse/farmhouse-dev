@@ -59,6 +59,7 @@ class App < Sinatra::Base
 
   get '/about' do
     @title = 'The Farmhouse: A Very Brief and Incomplete History'
+    @header = 'light'
 
     @friends = [
       {'name' => 'Shane Becker', 'image' => 'shane-becker.jpg', 'twitter' => 'veganstraightedge', 'instagram' => 'veganstraightedge'},
@@ -89,6 +90,7 @@ class App < Sinatra::Base
 
 
   get '/contact' do
+    @header = 'light'
 
     # https://developers.google.com/maps/documentation/staticmaps/
     map = {
@@ -102,6 +104,10 @@ class App < Sinatra::Base
     @map_options = "center=#{map['address']}&zoom=#{map['zoom']}&scale=#{map['scale']}&size=#{map['size']}&markers=#{map['markers']}"
 
     erb :contact
+  end
+
+  get '/projects' do
+     erb :projects
   end
 
 end
