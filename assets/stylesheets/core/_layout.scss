@@ -76,10 +76,12 @@
     padding: 2em 0;
   }
   @include respond-to($l-max-small, max-width) {
-    img {
-      border-top: 5px solid $highlight;
+    .img-full {
       margin-left: -6%;
       width: 112%;
+      img {
+        border-top: 5px solid $highlight;
+      }
     }
   }
   @include respond-to($l-min-small) {
@@ -87,15 +89,25 @@
       @include span-columns(5);
       padding: 5em 0;
     }
-    img {
-      @include span-columns(7);
-      border-left: 5px solid $highlight;
-      border-top: none;
+    .img-full {
+      @include shift(5);
+      overflow: hidden;
       position: absolute;
+      top: 0;
       right: 0;
-      .csstransforms & {
-        @include transform(translateY(-50%));
-        top: 50%;
+      bottom: 0;
+      left: 0;
+      img {
+        border-left: 5px solid $highlight;
+        border-top: none;
+        min-height: 100%;
+        width: auto;
+        min-width: 100%;
+        .csstransforms & {
+          @include transform(translateY(-50%));
+          position: absolute;
+          top: 50%;
+        }
       }
     }
   }
