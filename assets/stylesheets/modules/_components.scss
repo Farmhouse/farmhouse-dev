@@ -5,6 +5,24 @@
 // *************************************
 
 // -------------------------------------
+//   Headings
+// -------------------------------------
+
+.heading-alt {
+  @extend .t-h4;
+  border: 2px solid $dark-grey;
+  display: inline-block;
+  margin: 2em 0;
+  padding: .75em;
+  @include respond-to($l-min-small) {
+    padding: .75em 5em;
+  }
+  @include respond-to($l-min-medium) {
+    font-size: 1.777em;
+  }
+}
+
+// -------------------------------------
 //   Features
 // -------------------------------------
 
@@ -94,19 +112,6 @@
 .profile-grid {
   background: $xlight-grey;
   text-align: center;
-}
-.profile-grid-title {
-  @extend .t-h4;
-  border: 2px solid $dark-grey;
-  display: inline-block;
-  margin: 2em 0;
-  padding: .75em;
-  @include respond-to($l-min-small) {
-    padding: .75em 5em;
-  }
-  @include respond-to($l-min-medium) {
-    font-size: 1.777em;
-  }
 }
 .profile-grid-profiles {
   @include row();
@@ -231,24 +236,22 @@
 
 
 // -------------------------------------
-//   Big Tiles With Overlays
+//   Tiles With Overlays
 // -------------------------------------
 
-.big-tiles {
+[class*=tiles-] {
   @include clearfix;
 }
-.big-tile {
+
+.tile {
   @include box-sizing(border-box);
   position: relative;
   text-align: center;
-  @include respond-to($l-min-small) {
-    float: left;
-    width: 50%;
-  }
 }
-.big-tile-link {
+
+.tile-link {
   @include transition(background .30s ease-in-out);
-  background-color: rgba($white, .8);
+  background-color: rgba($white, .6);
   position: absolute;
   top: 0;
   right: 0;
@@ -256,35 +259,14 @@
   left: 0;
   &:focus,
   &:hover {
-    background-color: rgba($white, .9);
-  }
-  .big-tile:nth-child(1) & {
-    background-color: rgba($highlight, .8);
-    &:focus,
-    &:hover {
-      background-color: rgba($highlight, .9);
-    }
-  }
-  .big-tile:nth-child(3) & {
-    background-color: rgba(#538282, .8);
-    &:focus,
-    &:hover {
-      background-color: rgba(#538282, .9);
-    }
-  }
-  .big-tile:nth-child(4) & {
-    background-color: rgba(#ea5e28, .8);
-    &:focus,
-    &:hover {
-      background-color: rgba(#ea5e28, .9);
-    }
+    background-color: rgba($white, .8);
   }
 }
-.big-tile-text {
+
+.tile-text {
   @include transform(translateY(-50%));
   color: $alt-color;
   font-family: $alt-fontFamily-bold;
-  font-size: em(42);
   letter-spacing: .25em;
   text-decoration: none;
   text-transform: uppercase;
@@ -292,56 +274,122 @@
   position: absolute;
   top: 50%;
   width: 100%;
-  em {
-    display: block;
-    font-family: $base-fontFamily;
-    font-size: em(24, 42);
-    letter-spacing: 0.1em;
-    text-transform: none;
-  }
-  @include between($l-min-small, $l-max-medium) {
-    font-size: em(32);
-    em {
-      font-size: em(18, 32);
-    }
-  }
-  @include respond-to($l-min-medium) {
-    font-size: em(50);
-    em {
-      font-size: em(30, 50);
-    }
-  }
 }
-.big-tile.no-image {
-  background-color: $alt-background;
-  text-align: left;
-  .big-tile-text {
-    @include box-sizing(border-box);
-    font-size: em(21);
-    color: $white;
-    font-family: $base-fontFamily;
-    letter-spacing: normal;
-    text-transform: none;
-    padding: 0 $l-double-whitespace;
-    p {
-      margin-bottom: 2em;
+
+.tiles-big .tile {
+  @include respond-to($l-min-small) {
+    float: left;
+    width: 50%;
+  }
+  .tile-link {
+    background-color: rgba($white, .6);
+    &:focus,
+    &:hover {
+      background-color: rgba($white, .9);
+    }
+  }
+  &:nth-child(1) .tile-link {
+    background-color: rgba($highlight, .8);
+    &:focus,
+    &:hover {
+      background-color: rgba($highlight, .9);
+    }
+  }
+  &:nth-child(3) .tile-link {
+    background-color: rgba(#538282, .8);
+    &:focus,
+    &:hover {
+      background-color: rgba(#538282, .9);
+    }
+  }
+  &:nth-child(4) .tile-link {
+    background-color: rgba(#ea5e28, .8);
+    &:focus,
+    &:hover {
+      background-color: rgba(#ea5e28, .9);
+    }
+  }
+  .tile-text {
+    font-size: em(42);
+    em {
+      display: block;
+      font-family: $base-fontFamily;
+      font-size: em(24, 42);
+      letter-spacing: 0.1em;
+      text-transform: none;
     }
     @include between($l-min-small, $l-max-medium) {
-      font-size: em(16);
-      padding: 0 $l-half-whitespace;
+      font-size: em(32);
+      em {
+        font-size: em(18, 32);
+      }
     }
-    @include respond-to($l-max-small, max-width) {
-      @include transform(translateY(0));
-      position: static;
-      padding-top: 2em;
-      padding-bottom: 2em;
+    @include respond-to($l-min-medium) {
+      font-size: em(50);
+      em {
+        font-size: em(30, 50);
+      }
     }
   }
+  &.no-image {
+    background-color: $alt-background;
+    text-align: left;
+    .tile-text {
+      @include box-sizing(border-box);
+      font-size: em(21);
+      color: $white;
+      font-family: $base-fontFamily;
+      letter-spacing: normal;
+      text-transform: none;
+      padding: 0 $l-double-whitespace;
+      p {
+        margin-bottom: 2em;
+      }
+      @include between($l-min-small, $l-max-medium) {
+        font-size: em(16);
+        padding: 0 $l-half-whitespace;
+      }
+      @include respond-to($l-max-small, max-width) {
+        @include transform(translateY(0));
+        position: static;
+        padding-top: 2em;
+        padding-bottom: 2em;
+      }
+    }
+    @include respond-to($l-min-small) {
+      &:before {
+        content: "";
+        display: block;
+        margin-top: 65%;
+      }
+    }
+  }
+
+}
+
+.tiles-small {
   @include respond-to($l-min-small) {
-    &:before {
-      content: "";
-      display: block;
-      margin-top: 65%;
+    margin-left: -$l-half-whitespace;
+    margin-right: -$l-half-whitespace;
+  }
+  .tile {
+    margin-bottom: $base-whitespace;
+    @include respond-to($l-min-small) {
+      float: left;
+      padding: 0 $l-half-whitespace;
+      width: 50%;
+    }
+    @include respond-to($l-min-large) {
+      float: left;
+      width: 33.3333333%;
     }
   }
+  .tile-text {
+    font-size: em(30);
+  }
+}
+
+
+.friends-projects {
+  text-align: center;
 }
